@@ -1,0 +1,189 @@
+
+
+================================================================
+== Synthesis Summary Report of 'inner_product'
+================================================================
++ General Information: 
+    * Date:           Tue Feb 14 04:37:16 2023
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        InnerProduct
+    * Solution:       solution5 (Vivado IP Flow Target)
+    * Product family: kintex7
+    * Target device:  xc7k160t-fbg676-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |        Modules        | Issue|      | Latency | Latency| Iteration|         | Trip |          |      |         |           |           |     |
+    |        & Loops        | Type | Slack| (cycles)|  (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +-----------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ inner_product        |     -|  0.08|       10|  40.000|         -|       11|     -|        no|     -|  4 (~0%)|  820 (~0%)|  805 (~0%)|    -|
+    | o inner_product_loop  |     -|  2.92|        9|  36.000|         9|        1|     2|       yes|     -|        -|          -|          -|    -|
+    +-----------------------+------+------+---------+--------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------+----------+
+| Interface    | Bitwidth |
++--------------+----------+
+| a_0_address0 | 1        |
+| a_0_address1 | 1        |
+| a_0_q0       | 16       |
+| a_0_q1       | 16       |
+| a_1_address0 | 1        |
+| a_1_address1 | 1        |
+| a_1_q0       | 16       |
+| a_1_q1       | 16       |
+| a_2_address0 | 1        |
+| a_2_address1 | 1        |
+| a_2_q0       | 16       |
+| a_2_q1       | 16       |
+| a_3_address0 | 1        |
+| a_3_address1 | 1        |
+| a_3_q0       | 16       |
+| a_3_q1       | 16       |
+| b_0_address0 | 1        |
+| b_0_address1 | 1        |
+| b_0_q0       | 16       |
+| b_0_q1       | 16       |
+| b_1_address0 | 1        |
+| b_1_address1 | 1        |
+| b_1_q0       | 16       |
+| b_1_q1       | 16       |
+| b_2_address0 | 1        |
+| b_2_address1 | 1        |
+| b_2_q0       | 16       |
+| b_2_q1       | 16       |
+| b_3_address0 | 1        |
+| b_3_address1 | 1        |
+| b_3_q0       | 16       |
+| b_3_q1       | 16       |
++--------------+----------+
+
+* REGISTER
++-----------+---------+----------+
+| Interface | Mode    | Bitwidth |
++-----------+---------+----------+
+| s         | ap_none | 16       |
++-----------+---------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------+
+| Argument | Direction | Datatype                              |
++----------+-----------+---------------------------------------+
+| a        | in        | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
+| b        | in        | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
+| s        | out       | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>& |
++----------+-----------+---------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| a        | a_0_address0 | port    | offset   |
+| a        | a_0_ce0      | port    |          |
+| a        | a_0_q0       | port    |          |
+| a        | a_0_address1 | port    | offset   |
+| a        | a_0_ce1      | port    |          |
+| a        | a_0_q1       | port    |          |
+| a        | a_1_address0 | port    | offset   |
+| a        | a_1_ce0      | port    |          |
+| a        | a_1_q0       | port    |          |
+| a        | a_1_address1 | port    | offset   |
+| a        | a_1_ce1      | port    |          |
+| a        | a_1_q1       | port    |          |
+| a        | a_2_address0 | port    | offset   |
+| a        | a_2_ce0      | port    |          |
+| a        | a_2_q0       | port    |          |
+| a        | a_2_address1 | port    | offset   |
+| a        | a_2_ce1      | port    |          |
+| a        | a_2_q1       | port    |          |
+| a        | a_3_address0 | port    | offset   |
+| a        | a_3_ce0      | port    |          |
+| a        | a_3_q0       | port    |          |
+| a        | a_3_address1 | port    | offset   |
+| a        | a_3_ce1      | port    |          |
+| a        | a_3_q1       | port    |          |
+| b        | b_0_address0 | port    | offset   |
+| b        | b_0_ce0      | port    |          |
+| b        | b_0_q0       | port    |          |
+| b        | b_0_address1 | port    | offset   |
+| b        | b_0_ce1      | port    |          |
+| b        | b_0_q1       | port    |          |
+| b        | b_1_address0 | port    | offset   |
+| b        | b_1_ce0      | port    |          |
+| b        | b_1_q0       | port    |          |
+| b        | b_1_address1 | port    | offset   |
+| b        | b_1_ce1      | port    |          |
+| b        | b_1_q1       | port    |          |
+| b        | b_2_address0 | port    | offset   |
+| b        | b_2_ce0      | port    |          |
+| b        | b_2_q0       | port    |          |
+| b        | b_2_address1 | port    | offset   |
+| b        | b_2_ce1      | port    |          |
+| b        | b_2_q1       | port    |          |
+| b        | b_3_address0 | port    | offset   |
+| b        | b_3_ce0      | port    |          |
+| b        | b_3_q0       | port    |          |
+| b        | b_3_address1 | port    | offset   |
+| b        | b_3_ce1      | port    |          |
+| b        | b_3_q1       | port    |          |
+| s        | s            | port    |          |
+| s        | s_ap_vld     | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++--------------------------------------+-----+--------+-------------+-----+--------+---------+
+| Name                                 | DSP | Pragma | Variable    | Op  | Impl   | Latency |
++--------------------------------------+-----+--------+-------------+-----+--------+---------+
+| + inner_product                      | 4   |        |             |     |        |         |
+|   mul_mul_16s_16s_16_4_1_U9          | 1   |        | mul_ln859   | mul | dsp48  | 3       |
+|   mac_muladd_16s_16s_16ns_16_4_1_U11 | 1   |        | mul_ln859_1 | mul | dsp48  | 3       |
+|   mul_mul_16s_16s_16_4_1_U10         | 1   |        | mul_ln859_2 | mul | dsp48  | 3       |
+|   mac_muladd_16s_16s_16ns_16_4_1_U12 | 1   |        | mul_ln859_3 | mul | dsp48  | 3       |
+|   mac_muladd_16s_16s_16ns_16_4_1_U11 | 1   |        | add_ln859   | add | dsp48  | 3       |
+|   mac_muladd_16s_16s_16ns_16_4_1_U12 | 1   |        | add_ln859_1 | add | dsp48  | 3       |
+|   i_fu_791_p2                        | -   |        | i           | add | fabric | 0       |
++--------------------------------------+-----+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------+-------------------------------------------------------------+
+| Type            | Options                         | Location                                                    |
++-----------------+---------------------------------+-------------------------------------------------------------+
+| array_partition | variable=a block factor=4 dim=1 | InnerProduct/solution5/directives.tcl:8 in inner_product, a |
+| array_partition | variable=b block factor=4 dim=1 | InnerProduct/solution5/directives.tcl:9 in inner_product, b |
+| pipeline        | II=1 rewind                     | InnerProduct/solution5/directives.tcl:7 in inner_product    |
+| unroll          | factor=4                        | InnerProduct/solution5/directives.tcl:10 in inner_product   |
++-----------------+---------------------------------+-------------------------------------------------------------+
+
+

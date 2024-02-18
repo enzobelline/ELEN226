@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="loop_imperfect.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Midterm\loop_imperfect.cpp"/>
+    <originFiles name="loop_imperfect.h" path="Z:\ECC\Desktop\Winter2023\ELEN226\Midterm\loop_imperfect.h"/>
+  </source>
+  <testbench>
+    <originFiles name="loop_imperfect_test.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Midterm\loop_imperfect_test.cpp"/>
+    <originFiles name="result.goldenImperfect.dat" path="Z:\ECC\Desktop\Winter2023\ELEN226\Midterm\result.goldenImperfect.dat"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

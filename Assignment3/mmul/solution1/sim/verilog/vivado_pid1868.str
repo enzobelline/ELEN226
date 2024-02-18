@@ -1,0 +1,163 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:48:16 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 1868
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Feb 17 23:49:39 PST 2023
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 4
+
+Screen size: 2560x1320
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	C:/Apps/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9
+Java executable: 	C:/Apps/Xilinx/Vivado/2022.1/tps/win64/jre11.0.11_9/bin/java.exe
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Dsun.java2d.d3d=false, -Dsun.awt.nopixfmt=true, -Dsun.java2d.dpiaware=true, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	lkim
+User home directory: C:/Users/lkim
+User working directory: Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution1/sim/verilog
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: C:/Apps/Xilinx/Vivado
+HDI_APPROOT: C:/Apps/Xilinx/Vivado/2022.1
+RDI_DATADIR: C:/Apps/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: C:/Apps/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: z:/ECC/AppData/Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: z:/ECC/AppData/Xilinx/Vivado/2022.1/
+Vivado layouts directory: z:/ECC/AppData/Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	C:/Apps/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution1/sim/verilog/vivado.log
+Vivado journal file: 	Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution1/sim/verilog/vivado.jou
+Engine tmp dir: 	Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution1/sim/verilog/.Xil/Vivado-1868-winvdi1002
+
+Xilinx Environment Variables
+----------------------------
+AUTOESL_VIVADO_HLS_VERSION: true
+VIVADO_HLS_ARG_DBG: 0
+VIVADO_HLS_ARG_M32: 0
+XILINX: C:/Apps/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@winlicense.engr.scu.edu
+XILINX_DSP: C:/Apps/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: C:/Apps/Xilinx/Vitis_HLS/2022.1
+XILINX_OPENCL: C:/Apps/Xilinx/Vitis_HLS/2022.1
+XILINX_OPENCL_CLANG: C:/Apps/Xilinx/Vitis_HLS/2022.1/win64/tools/clang
+XILINX_PLANAHEAD: C:/Apps/Xilinx/Vivado/2022.1
+XILINX_SDK: C:/Apps/Xilinx/Vitis/2022.1
+XILINX_VITIS: C:/Apps/Xilinx/Vitis/2022.1
+XILINX_VIVADO: C:/Apps/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: C:/Apps/Xilinx/Vivado/2022.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,253 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// WARNING: HEventQueue.dispatchEvent() is taking  3346 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 60 MB. Current time: 2/17/23, 11:49:45 PM PST
+// Tcl Message: source open_wave.tcl 
+// Tcl Message: # current_fileset 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 68 MB (+68677kb) [00:00:40]
+// [Engine Memory]: 1,253 MB (+1161923kb) [00:00:40]
+// WARNING: HEventQueue.dispatchEvent() is taking  6346 ms.
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Apps/Xilinx/Vivado/2022.1/data/ip'. 
+// [GUI Memory]: 89 MB (+18972kb) [00:00:42]
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// WARNING: HEventQueue.dispatchEvent() is taking  1309 ms.
+// Tcl Message: current_fileset: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1236.391 ; gain = 0.000 
+// Tcl Message: # open_wave_database mmul.wdb 
+// Tcl Message: INFO: [Wavedata 42-564]   Found protocol instance at /apatb_mmul_top/AESL_inst_mmul/AESL_inst_mmul_activity 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_MOVE_CURSOR
+// Tcl Message: open_wave_config Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution1/sim/verilog/mmul.wcfg 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 113 MB (+20222kb) [00:00:45]
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 75 MB. Current time: 2/17/23, 11:49:59 PM PST
+dismissDialog("Sourcing Tcl script 'open_wave.tcl'"); // bA
+// TclEventType: STOP_PROGRESS_DIALOG
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 121 MB (+2579kb) [00:13:00]
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 71 MB. Current time: 2/18/23, 12:02:13 AM PST
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 70 MB. Current time: 2/18/23, 12:02:16 AM PST
+// [GUI Memory]: 129 MB (+1713kb) [00:18:25]

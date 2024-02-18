@@ -1,0 +1,87 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Fri Feb 24 12:41:11 2023
+| Host         : winvdi1009 running 64-bit major release  (build 9200)
+| Command      : report_design_analysis -file ./report/inner_product_design_analysis_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7k160t
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------
+
+Report Design Analysis
+
+Table of Contents
+-----------------
+1. Setup Path Characteristics 1-1
+2. Logic Level Distribution
+3. Placer Final Level Congestion Reporting
+4. SLR Net Crossing Reporting
+
+1. Setup Path Characteristics 1-1
+---------------------------------
+
++---------------------------+-----------------------------+
+|      Characteristics      |           Path #1           |
++---------------------------+-----------------------------+
+| Requirement               | 4.000                       |
+| Path Delay                | 1.225                       |
+| Logic Delay               | 0.356(30%)                  |
+| Net Delay                 | 0.869(70%)                  |
+| Clock Skew                | -0.027                      |
+| Slack                     | 2.411                       |
+| Clock Uncertainty         | 0.035                       |
+| Clock Relationship        | Safely Timed                |
+| Clock Delay Group         | Same Clock                  |
+| Logic Levels              | 1                           |
+| Routes                    | NA                          |
+| Logical Path              | FDSE/C-(4)-LUT2-(21)-FDRE/R |
+| Start Point Clock         | ap_clk                      |
+| End Point Clock           | ap_clk                      |
+| DSP Block                 | None                        |
+| RAM Registers             |                             |
+| IO Crossings              | 0                           |
+| Config Crossings          | 0                           |
+| SLR Crossings             | 0                           |
+| PBlocks                   | 0                           |
+| High Fanout               | 21                          |
+| Dont Touch                | 0                           |
+| Mark Debug                | 0                           |
+| Start Point Pin Primitive | FDSE/C                      |
+| End Point Pin Primitive   | FDRE/R                      |
+| Start Point Pin           | ap_CS_fsm_reg[0]/C          |
+| End Point Pin             | acc_V_fu_46_reg[0]/R        |
++---------------------------+-----------------------------+
+* Bounding box calculated as % of dimensions for the target device (308, 500)
+
+
+2. Logic Level Distribution
+---------------------------
+
++-----------------+-------------+----+----+---+
+| End Point Clock | Requirement |  0 |  1 | 2 |
++-----------------+-------------+----+----+---+
+| ap_clk          | 4.000ns     | 52 | 31 | 1 |
++-----------------+-------------+----+----+---+
+* Columns represent the logic levels per end point clock
+** Distribution is for top worst 84 paths
+
+
+3. Placer Final Level Congestion Reporting
+------------------------------------------
+
++-----------+------+-------+------------+--------+---------------+---------------+-----+--------+------+------+------+-----+-------+-----+------------+
+| Direction | Type | Level | Congestion | Window | Combined LUTs | Avg LUT Input | LUT | LUTRAM | Flop | MUXF | RAMB | DSP | CARRY | SRL | Cell Names |
++-----------+------+-------+------------+--------+---------------+---------------+-----+--------+------+------+------+-----+-------+-----+------------+
+* The design has not been placed, hence congestion data is not available. The command report_design_analysis -congestion should be run only after place_design has completed.
+
+
+4. SLR Net Crossing Reporting
+-----------------------------
+
++------------+-----------------------------+
+| Cell Names | Number of Nets crossing SLR |
++------------+-----------------------------+
+* The current part is not an SSI device
+
+

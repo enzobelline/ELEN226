@@ -1,0 +1,7 @@
+Running: xsim.dir/loop_perfect/xsimk.exe -simmode gui -wdb loop_perfect.wdb -simrunnum 0 -socket 55543
+Design successfully loaded
+Design Loading Memory Usage: 9116 KB (Peak: 9116 KB)
+Design Loading CPU Usage: 61 ms
+Simulation completed
+Simulation Memory Usage: 12408 KB (Peak: 12408 KB)
+Simulation CPU Usage: 77 ms

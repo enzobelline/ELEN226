@@ -1,0 +1,417 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbg676-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=4
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbg676-2 
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 4 
+INFO: [HLS 200-1510] Running: source ./InnerProduct/solution3/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name inner_product inner_product 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product/inner_product_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.385 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Analyzing design file 'inner_product.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 6.978 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed.h:183:79)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:55)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<32, 32, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1320:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:61)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:325)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<33, 33, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:385)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:345)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:333)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:248)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:246)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:8:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:12:7)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:12:15)
+INFO: [HLS 214-291] Loop 'inner_product_loop' is marked as complete unroll implied by the pipeline pragma (inner_product.cpp:10:2)
+INFO: [HLS 214-186] Unrolling loop 'inner_product_loop' (inner_product.cpp:10:2) in function 'inner_product' completely with a factor of 8 (inner_product.cpp:4:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'inner_product_loop' (inner_product.cpp:10:2) in function 'inner_product' has been removed because the loop is unrolled completely (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 's' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'b' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating bram variable 'a' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.48 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.119 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.185 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.201 seconds; current allocated memory: 1.213 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'inner_product' (inner_product.cpp:3:1)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.379 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.146 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inner_product' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inner_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=acc_V) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'inner_product'.
+WARNING: [HLS 200-885] The II Violation in module 'inner_product' (function 'inner_product'): Unable to schedule 'load' operation ('a_load_1') on array 'a' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'a'.
+WARNING: [HLS 200-885] The II Violation in module 'inner_product' (function 'inner_product'): Unable to schedule 'load' operation ('a_load_1') on array 'a' due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array 'a'.
+WARNING: [HLS 200-885] The II Violation in module 'inner_product' (function 'inner_product'): Unable to schedule 'load' operation ('a_load_3') on array 'a' due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array 'a'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 4, Depth = 11, function 'inner_product'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.779 seconds; current allocated memory: 1.213 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.33 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inner_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/s' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inner_product' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'inner_product' pipeline 'inner_product' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inner_product'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.634 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 4.094 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 3.348 seconds; current allocated memory: 1.213 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for inner_product.
+INFO: [VLOG 209-307] Generating Verilog RTL for inner_product.
+INFO: [HLS 200-789] **** Estimated Fmax: 372.02 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 2 seconds. Elapsed time: 25.344 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 4 seconds. Total elapsed time: 29.008 seconds; peak allocated memory: 1.213 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbg676-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=4
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbg676-2 
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 4 
+INFO: [HLS 200-1510] Running: source ./InnerProduct/solution3/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name inner_product inner_product 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product/inner_product_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete inner_product a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete inner_product b 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.39 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Analyzing design file 'inner_product.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 7.052 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed.h:183:79)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:55)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<32, 32, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1320:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:61)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:325)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<33, 33, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:385)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:345)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:333)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:248)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:246)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:8:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:12:7)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:12:15)
+INFO: [HLS 214-291] Loop 'inner_product_loop' is marked as complete unroll implied by the pipeline pragma (inner_product.cpp:10:2)
+INFO: [HLS 214-186] Unrolling loop 'inner_product_loop' (inner_product.cpp:10:2) in function 'inner_product' completely with a factor of 8 (inner_product.cpp:4:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'inner_product_loop' (inner_product.cpp:10:2) in function 'inner_product' has been removed because the loop is unrolled completely (inner_product.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. (inner_product.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 's' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_7' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_6' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_5' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_4' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_3' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_7' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_6' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_5' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_4' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_3' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 8.192 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.062 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.248 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.216 seconds; current allocated memory: 1.213 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'inner_product' (inner_product.cpp:3:1)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.307 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inner_product' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inner_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=acc_V) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'inner_product'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, function 'inner_product'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.724 seconds; current allocated memory: 1.213 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.267 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inner_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/s' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inner_product' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'inner_product' pipeline 'inner_product' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inner_product'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.871 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 3.608 seconds; current allocated memory: 1.213 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 3.442 seconds; current allocated memory: 1.213 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for inner_product.
+INFO: [VLOG 209-307] Generating Verilog RTL for inner_product.
+INFO: [HLS 200-789] **** Estimated Fmax: 488.52 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3 seconds. CPU system time: 2 seconds. Elapsed time: 25.882 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 4 seconds. Total elapsed time: 29.668 seconds; peak allocated memory: 1.213 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbg676-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=4
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbg676-2 
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 4 
+INFO: [HLS 200-1510] Running: source ./InnerProduct/solution3/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name inner_product inner_product 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product/inner_product_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete inner_product a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete inner_product b 
+INFO: [HLS 200-1510] Running: export_design -flow syn -rtl verilog -format ip_catalog 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [IMPL 213-8] Starting RTL evaluation using Vivado ...
+INFO: [HLS 200-802] Generated output file InnerProduct/solution3/impl/export.zip
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 250.885 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6 seconds. Total CPU system time: 3 seconds. Total elapsed time: 256.416 seconds; peak allocated memory: 1.213 GB.
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+Tool Version Limit: 2022.04
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7k160t-fbg676-2'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+INFO: [HLS 200-1464] Running solution command: config_compile -complex-mul-dsp=0
+INFO: [HLS 200-1464] Running solution command: config_compile -pipeline_loops=0
+INFO: [HLS 200-1464] Running solution command: config_export -format=ip_catalog
+INFO: [HLS 200-1464] Running solution command: config_export -rtl=verilog
+INFO: [HLS 200-1464] Running solution command: config_export -vivado_clock=4
+INFO: [HLS 200-1510] Running: set_part xc7k160t-fbg676-2 
+INFO: [HLS 200-1510] Running: create_clock -period 4 -name default 
+INFO: [HLS 200-1510] Running: config_compile -pipeline_loops 0 
+INFO: [HLS 200-1510] Running: config_export -format ip_catalog -rtl verilog -vivado_clock 4 
+INFO: [HLS 200-1510] Running: source ./InnerProduct/solution3/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_top -name inner_product inner_product 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product/inner_product_loop 
+INFO: [HLS 200-1510] Running: set_directive_pipeline inner_product 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete inner_product a 
+INFO: [HLS 200-1510] Running: set_directive_array_partition -dim 1 -type complete inner_product b 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.449 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-10] Analyzing design file 'inner_product.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 9.784 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed.h:183:79)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:55)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<32, 32, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1320:12)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1316:61)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:576:146)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi33ELb1EEC2EDq33_i' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:447:80)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:449:5)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base(int)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:325)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<33, 33, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:385)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:345)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1393:333)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator!() const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:854:9)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<32, 32, true>::plus ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:248)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator=<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<33, 33, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' (C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:1413:246)
+INFO: [HLS 214-131] Inlining function 'ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>::ap_fixed(int)' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:8:8)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>& ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator+=<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<32, 32, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&)' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:12:7)
+INFO: [HLS 214-131] Inlining function 'ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::RType<16, 16, true>::mult ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>::operator*<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0>(ap_fixed_base<16, 16, true, (ap_q_mode)5, (ap_o_mode)3, 0> const&) const' into 'inner_product(ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<16, 16, (ap_q_mode)5, (ap_o_mode)3, 0>&)' (inner_product.cpp:12:15)
+INFO: [HLS 214-291] Loop 'inner_product_loop' is marked as complete unroll implied by the pipeline pragma (inner_product.cpp:10:2)
+INFO: [HLS 214-186] Unrolling loop 'inner_product_loop' (inner_product.cpp:10:2) in function 'inner_product' completely with a factor of 8 (inner_product.cpp:4:0)
+WARNING: [HLS 214-189] Pipeline directive for loop 'inner_product_loop' (inner_product.cpp:10:2) in function 'inner_product' has been removed because the loop is unrolled completely (inner_product.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'a': Complete partitioning on dimension 1. (inner_product.cpp:4:0)
+INFO: [HLS 214-248] Applying array_partition to 'b': Complete partitioning on dimension 1. (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 's' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_7' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_6' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_5' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_4' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_3' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_2' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_1' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'b_0' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_7' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_6' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_5' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_4' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_3' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_2' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_1' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 214-241] Aggregating scalar variable 'a_0' with compact=bit mode in 16-bits (inner_product.cpp:4:0)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 0 seconds. CPU system time: 1 seconds. Elapsed time: 10.485 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.065 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.481 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.27 seconds; current allocated memory: 1.214 GB.
+INFO: [XFORM 203-11] Balancing expressions in function 'inner_product' (inner_product.cpp:3:1)...7 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.442 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.18 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'inner_product' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'inner_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=acc_V) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln859) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'inner_product'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 8, function 'inner_product'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.146 seconds; current allocated memory: 1.214 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.428 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'inner_product' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/a_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_0' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_4' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_5' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_6' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/b_7' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'inner_product/s' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'inner_product' to 'ap_ctrl_hs'.
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'inner_product' pipeline 'inner_product' pipeline type 'function pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_16ns_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16s_16s_16_4_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'inner_product'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 1.246 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 4.548 seconds; current allocated memory: 1.214 GB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 3.992 seconds; current allocated memory: 1.214 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for inner_product.
+INFO: [VLOG 209-307] Generating Verilog RTL for inner_product.
+INFO: [HLS 200-789] **** Estimated Fmax: 488.52 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 2 seconds. CPU system time: 2 seconds. Elapsed time: 33.879 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 7 seconds. Total CPU system time: 4 seconds. Total elapsed time: 38.343 seconds; peak allocated memory: 1.214 GB.

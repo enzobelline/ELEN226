@@ -1,0 +1,188 @@
+================================================================
+== Vivado Place & Route Results
+================================================================
++ General Information:
+    * Date:            Fri Feb 17 17:12:42 -0800 2023
+    * Version:         2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:         mmul
+    * Solution:        solution4 (Vivado IP Flow Target)
+    * Product family:  kintex7
+    * Target device:   xc7k160t-fbg676-2
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * Place & Route target clock:  4 ns
+    * C-Synthesis target clock:    4 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Place & Route Options:
+    * config_export -vivado_impl_strategy:  default
+    * config_export -vivado_phys_opt:       none
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== Place & Route Resource Summary
+================================================================
+LUT:              341
+FF:               1035
+DSP:              1
+BRAM:             0
+URAM:             0
+SRL:              7
+
+
+================================================================
+== Place & Route Timing Summary
+================================================================
+* Timing was met
++----------------+-------------+
+| Timing         | Period (ns) |
++----------------+-------------+
+| Target         | 4.000       |
+| Post-Synthesis | 3.229       |
+| Post-Route     | 3.371       |
++----------------+-------------+
+
+
+================================================================
+== Place & Route Resources
+================================================================
++----------------------------+-----+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                       | LUT | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++----------------------------+-----+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                       | 341 | 1035 | 1   |      |      |     |        |      |         |          |        |
+|   (inst)                   | 115 | 1034 | 1   |      |      |     |        |      |         |          |        |
+|   flow_control_loop_pipe_U | 27  | 1    |     |      |      |     |        |      |         |          |        |
+|   mux_43_16_1_1_U14        | 199 |      |     |      |      |     |        |      |         |          |        |
++----------------------------+-----+------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== Place & Route Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.34%  | OK     |
+| FD                                                        | 50%       | 0.51%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.02%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 0.17%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 0.17%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 1901      | 6      | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.500ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.350ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== Place & Route Timing Paths
+================================================================
+* Timing was met
++-------+-------+--------------------------+------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN           | ENDPOINT PIN                 | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                          |                              |              |            |                |          DELAY |        DELAY |
++-------+-------+--------------------------+------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.629 | j_load_reg_1424_reg[1]/C | mul_ln859_reg_1475_reg/A[5]  |            4 |         18 |          3.048 |          0.534 |        2.514 |
+| Path2 | 0.661 | j_load_reg_1424_reg[1]/C | mul_ln859_reg_1475_reg/A[3]  |            4 |         18 |          3.016 |          0.534 |        2.482 |
+| Path3 | 0.665 | j_load_reg_1424_reg[1]/C | mul_ln859_reg_1475_reg/A[11] |            4 |         18 |          3.012 |          0.534 |        2.478 |
+| Path4 | 0.678 | j_load_reg_1424_reg[1]/C | mul_ln859_reg_1475_reg/A[8]  |            4 |         18 |          2.999 |          0.534 |        2.465 |
+| Path5 | 0.695 | j_load_reg_1424_reg[1]/C | mul_ln859_reg_1475_reg/A[10] |            4 |         18 |          2.982 |          0.534 |        2.448 |
++-------+-------+--------------------------+------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +------------------------------------------------+----------------------+
+    | Path1 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | j_load_reg_1424_reg[1]                         | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_264 | LUT.others.LUT5      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_183 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_142 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_27  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path2 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | j_load_reg_1424_reg[1]                         | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_264 | LUT.others.LUT5      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_183 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_154 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_29  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path3 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | j_load_reg_1424_reg[1]                         | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_264 | LUT.others.LUT5      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_212 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_106 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_21  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path4 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | j_load_reg_1424_reg[1]                         | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_264 | LUT.others.LUT5      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_183 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_124 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_24  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path5 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | j_load_reg_1424_reg[1]                         | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_264 | LUT.others.LUT5      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_183 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_112 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_22  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+
+================================================================
+== Place & Route Vivado Reports
+================================================================
++--------------------------+--------------------------------------------------------------+
+| Report Type              | Report Location                                              |
++--------------------------+--------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/mmul_design_analysis_routed.rpt          |
+| failfast                 | impl/verilog/report/mmul_failfast_routed.rpt                 |
+| status                   | impl/verilog/report/mmul_status_routed.rpt                   |
+| timing                   | impl/verilog/report/mmul_timing_routed.rpt                   |
+| timing_paths             | impl/verilog/report/mmul_timing_paths_routed.rpt             |
+| utilization              | impl/verilog/report/mmul_utilization_routed.rpt              |
+| utilization_hierarchical | impl/verilog/report/mmul_utilization_hierarchical_routed.rpt |
++--------------------------+--------------------------------------------------------------+
+
+

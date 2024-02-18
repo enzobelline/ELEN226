@@ -1,0 +1,5 @@
+inner_product_mux_21_16_1_1
+inner_product_mul_mul_16s_16s_16_4_1
+inner_product_mac_muladd_16s_16s_16ns_16_4_1
+inner_product_flow_control_loop_pipe
+inner_product

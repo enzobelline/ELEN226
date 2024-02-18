@@ -1,0 +1,453 @@
+
+
+================================================================
+== Vitis HLS Report for 'loop_perfect'
+================================================================
+* Date:           Tue Feb 14 08:43:53 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        proj_loop_perfect
+* Solution:       solution6 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.894 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+------------------------------------------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval |                 Pipeline                 |
+    |   min   |   max   |    min   |    max   | min | max |                   Type                   |
+    +---------+---------+----------+----------+-----+-----+------------------------------------------+
+    |      105|      106|  0.420 us|  0.424 us|  100|  100|  loop rewind stp(delay=0 clock cycles(s))|
+    +---------+---------+----------+----------+-----+-----+------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_I  |      105|      105|        11|          5|          1|    20|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 5, depth = 11
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 1
+  Pipeline-0 : II = 5, D = 11, States = { 2 3 4 5 6 7 8 9 10 11 12 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.38>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %A_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 13 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i5 %A_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 14 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %B_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 15 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %B_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 16 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.38ns)   --->   "%br_ln23 = br void %rewind_header" [loop_perfect.cpp:23]   --->   Operation 17 'br' 'br_ln23' <Predicate = true> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 0.66>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "%do_init = phi i1 1, void %entry, i1 0, void %for.inc.19, i1 1, void %for.end21"   --->   Operation 18 'phi' 'do_init' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%A_0_addr = getelementptr i5 %A_0, i64 0, i64 1"   --->   Operation 19 'getelementptr' 'A_0_addr' <Predicate = (do_init)> <Delay = 0.00>
+ST_2 : Operation 20 [2/2] (0.66ns)   --->   "%acc_V = load i4 %A_0_addr"   --->   Operation 20 'load' 'acc_V' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%A_0_addr_1 = getelementptr i5 %A_0, i64 0, i64 2"   --->   Operation 21 'getelementptr' 'A_0_addr_1' <Predicate = (do_init)> <Delay = 0.00>
+ST_2 : Operation 22 [2/2] (0.66ns)   --->   "%A_0_load = load i4 %A_0_addr_1"   --->   Operation 22 'load' 'A_0_load' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%A_1_addr_1 = getelementptr i5 %A_1, i64 0, i64 1"   --->   Operation 23 'getelementptr' 'A_1_addr_1' <Predicate = (do_init)> <Delay = 0.00>
+ST_2 : Operation 24 [2/2] (0.66ns)   --->   "%A_1_load_1 = load i4 %A_1_addr_1"   --->   Operation 24 'load' 'A_1_load_1' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%A_1_addr_9 = getelementptr i5 %A_1, i64 0, i64 9"   --->   Operation 25 'getelementptr' 'A_1_addr_9' <Predicate = (do_init)> <Delay = 0.00>
+ST_2 : Operation 26 [2/2] (0.66ns)   --->   "%A_1_load_9 = load i4 %A_1_addr_9"   --->   Operation 26 'load' 'A_1_load_9' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+
+State 3 <SV = 2> <Delay = 1.66>
+ST_3 : Operation 27 [1/2] (0.66ns)   --->   "%acc_V = load i4 %A_0_addr"   --->   Operation 27 'load' 'acc_V' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 28 [1/2] (0.66ns)   --->   "%A_0_load = load i4 %A_0_addr_1"   --->   Operation 28 'load' 'A_0_load' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%A_0_addr_2 = getelementptr i5 %A_0, i64 0, i64 3"   --->   Operation 29 'getelementptr' 'A_0_addr_2' <Predicate = (do_init)> <Delay = 0.00>
+ST_3 : Operation 30 [2/2] (0.66ns)   --->   "%A_0_load_1 = load i4 %A_0_addr_2"   --->   Operation 30 'load' 'A_0_load_1' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "%A_0_addr_3 = getelementptr i5 %A_0, i64 0, i64 4"   --->   Operation 31 'getelementptr' 'A_0_addr_3' <Predicate = (do_init)> <Delay = 0.00>
+ST_3 : Operation 32 [2/2] (0.66ns)   --->   "%A_0_load_2 = load i4 %A_0_addr_3"   --->   Operation 32 'load' 'A_0_load_2' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%A_1_addr = getelementptr i5 %A_1, i64 0, i64 0"   --->   Operation 33 'getelementptr' 'A_1_addr' <Predicate = (do_init)> <Delay = 0.00>
+ST_3 : Operation 34 [2/2] (0.66ns)   --->   "%A_1_load = load i4 %A_1_addr"   --->   Operation 34 'load' 'A_1_load' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 35 [1/2] (0.66ns)   --->   "%A_1_load_1 = load i4 %A_1_addr_1"   --->   Operation 35 'load' 'A_1_load_1' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%A_1_addr_3 = getelementptr i5 %A_1, i64 0, i64 3"   --->   Operation 36 'getelementptr' 'A_1_addr_3' <Predicate = (do_init)> <Delay = 0.00>
+ST_3 : Operation 37 [2/2] (0.66ns)   --->   "%A_1_load_3 = load i4 %A_1_addr_3"   --->   Operation 37 'load' 'A_1_load_3' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 38 [1/2] (0.66ns)   --->   "%A_1_load_9 = load i4 %A_1_addr_9"   --->   Operation 38 'load' 'A_1_load_9' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%A_1_load_9_cast = sext i5 %A_1_load_9"   --->   Operation 39 'sext' 'A_1_load_9_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_3 : Operation 40 [3/3] (0.99ns) (grouped into DSP with root node tmp19)   --->   "%mul_i_i_19 = mul i10 %A_1_load_9_cast, i10 19"   --->   Operation 40 'mul' 'mul_i_i_19' <Predicate = (do_init)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 2.19>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%mul_i_i_2 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %A_0_load, i1 0"   --->   Operation 41 'bitconcatenate' 'mul_i_i_2' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (0.00ns)   --->   "%mul_i_i_2_cast = sext i6 %mul_i_i_2"   --->   Operation 42 'sext' 'mul_i_i_2_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 43 [1/2] (0.66ns)   --->   "%A_0_load_1 = load i4 %A_0_addr_2"   --->   Operation 43 'load' 'A_0_load_1' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%A_0_load_2_cast22 = sext i5 %A_0_load_1"   --->   Operation 44 'sext' 'A_0_load_2_cast22' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%p_shl15 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %A_0_load_1, i2 0"   --->   Operation 45 'bitconcatenate' 'p_shl15' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%p_shl15_cast = sext i7 %p_shl15"   --->   Operation 46 'sext' 'p_shl15_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.70ns)   --->   "%mul_i_i_3 = sub i8 %p_shl15_cast, i8 %A_0_load_2_cast22"   --->   Operation 47 'sub' 'mul_i_i_3' <Predicate = (do_init)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%mul_i_i_3_cast = sext i8 %mul_i_i_3"   --->   Operation 48 'sext' 'mul_i_i_3_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 49 [1/2] (0.66ns)   --->   "%A_0_load_2 = load i4 %A_0_addr_3"   --->   Operation 49 'load' 'A_0_load_2' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%mul_i_i_4 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %A_0_load_2, i2 0"   --->   Operation 50 'bitconcatenate' 'mul_i_i_4' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%mul_i_i_4_cast = sext i7 %mul_i_i_4"   --->   Operation 51 'sext' 'mul_i_i_4_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%A_0_addr_4 = getelementptr i5 %A_0, i64 0, i64 5"   --->   Operation 52 'getelementptr' 'A_0_addr_4' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 53 [2/2] (0.66ns)   --->   "%A_0_load_3 = load i4 %A_0_addr_4"   --->   Operation 53 'load' 'A_0_load_3' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%A_0_addr_5 = getelementptr i5 %A_0, i64 0, i64 6"   --->   Operation 54 'getelementptr' 'A_0_addr_5' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 55 [2/2] (0.66ns)   --->   "%A_0_load_4 = load i4 %A_0_addr_5"   --->   Operation 55 'load' 'A_0_load_4' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 56 [1/2] (0.66ns)   --->   "%A_1_load = load i4 %A_1_addr"   --->   Operation 56 'load' 'A_1_load' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 57 [1/1] (0.00ns)   --->   "%A_1_load_1_cast = sext i5 %A_1_load_1"   --->   Operation 57 'sext' 'A_1_load_1_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 58 [3/3] (0.99ns) (grouped into DSP with root node tmp10)   --->   "%mul_i_i_11 = mul i10 %A_1_load_1_cast, i10 11"   --->   Operation 58 'mul' 'mul_i_i_11' <Predicate = (do_init)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 59 [1/1] (0.00ns)   --->   "%A_1_addr_2 = getelementptr i5 %A_1, i64 0, i64 2"   --->   Operation 59 'getelementptr' 'A_1_addr_2' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 60 [2/2] (0.66ns)   --->   "%A_1_load_2 = load i4 %A_1_addr_2"   --->   Operation 60 'load' 'A_1_load_2' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 61 [1/2] (0.66ns)   --->   "%A_1_load_3 = load i4 %A_1_addr_3"   --->   Operation 61 'load' 'A_1_load_3' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 62 [1/1] (0.00ns)   --->   "%A_1_addr_4 = getelementptr i5 %A_1, i64 0, i64 4"   --->   Operation 62 'getelementptr' 'A_1_addr_4' <Predicate = (do_init)> <Delay = 0.00>
+ST_4 : Operation 63 [2/2] (0.66ns)   --->   "%A_1_load_4 = load i4 %A_1_addr_4"   --->   Operation 63 'load' 'A_1_load_4' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_4 : Operation 64 [2/3] (0.99ns) (grouped into DSP with root node tmp19)   --->   "%mul_i_i_19 = mul i10 %A_1_load_9_cast, i10 19"   --->   Operation 64 'mul' 'mul_i_i_19' <Predicate = (do_init)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 65 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp3 = add i9 %mul_i_i_3_cast, i9 %mul_i_i_4_cast"   --->   Operation 65 'add' 'tmp3' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 66 [1/1] (0.81ns) (root node of TernaryAdder)   --->   "%tmp2 = add i9 %tmp3, i9 %mul_i_i_2_cast"   --->   Operation 66 'add' 'tmp2' <Predicate = (do_init)> <Delay = 0.81> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 0.99>
+ST_5 : Operation 67 [1/1] (0.00ns)   --->   "%A_0_load_cast = sext i5 %acc_V"   --->   Operation 67 'sext' 'A_0_load_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_5 : Operation 68 [1/2] (0.66ns)   --->   "%A_0_load_3 = load i4 %A_0_addr_4"   --->   Operation 68 'load' 'A_0_load_3' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 69 [1/2] (0.66ns)   --->   "%A_0_load_4 = load i4 %A_0_addr_5"   --->   Operation 69 'load' 'A_0_load_4' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 70 [1/1] (0.00ns)   --->   "%A_0_addr_6 = getelementptr i5 %A_0, i64 0, i64 7"   --->   Operation 70 'getelementptr' 'A_0_addr_6' <Predicate = (do_init)> <Delay = 0.00>
+ST_5 : Operation 71 [2/2] (0.66ns)   --->   "%A_0_load_5 = load i4 %A_0_addr_6"   --->   Operation 71 'load' 'A_0_load_5' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 72 [1/1] (0.00ns)   --->   "%A_0_addr_7 = getelementptr i5 %A_0, i64 0, i64 8"   --->   Operation 72 'getelementptr' 'A_0_addr_7' <Predicate = (do_init)> <Delay = 0.00>
+ST_5 : Operation 73 [2/2] (0.66ns)   --->   "%A_0_load_6 = load i4 %A_0_addr_7"   --->   Operation 73 'load' 'A_0_load_6' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 74 [2/3] (0.99ns) (grouped into DSP with root node tmp10)   --->   "%mul_i_i_11 = mul i10 %A_1_load_1_cast, i10 11"   --->   Operation 74 'mul' 'mul_i_i_11' <Predicate = (do_init)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 75 [1/2] (0.66ns)   --->   "%A_1_load_2 = load i4 %A_1_addr_2"   --->   Operation 75 'load' 'A_1_load_2' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 76 [1/1] (0.00ns)   --->   "%A_1_load_3_cast = sext i5 %A_1_load_3"   --->   Operation 76 'sext' 'A_1_load_3_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_5 : Operation 77 [3/3] (0.99ns) (grouped into DSP with root node tmp13)   --->   "%mul_i_i_13 = mul i10 %A_1_load_3_cast, i10 13"   --->   Operation 77 'mul' 'mul_i_i_13' <Predicate = (do_init)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 78 [1/2] (0.66ns)   --->   "%A_1_load_4 = load i4 %A_1_addr_4"   --->   Operation 78 'load' 'A_1_load_4' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 79 [1/1] (0.00ns)   --->   "%A_1_addr_5 = getelementptr i5 %A_1, i64 0, i64 5"   --->   Operation 79 'getelementptr' 'A_1_addr_5' <Predicate = (do_init)> <Delay = 0.00>
+ST_5 : Operation 80 [2/2] (0.66ns)   --->   "%A_1_load_5 = load i4 %A_1_addr_5"   --->   Operation 80 'load' 'A_1_load_5' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 81 [1/1] (0.00ns)   --->   "%A_1_addr_6 = getelementptr i5 %A_1, i64 0, i64 6"   --->   Operation 81 'getelementptr' 'A_1_addr_6' <Predicate = (do_init)> <Delay = 0.00>
+ST_5 : Operation 82 [2/2] (0.66ns)   --->   "%A_1_load_6 = load i4 %A_1_addr_6"   --->   Operation 82 'load' 'A_1_load_6' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_5 : Operation 83 [1/3] (0.00ns) (grouped into DSP with root node tmp19)   --->   "%mul_i_i_19 = mul i10 %A_1_load_9_cast, i10 19"   --->   Operation 83 'mul' 'mul_i_i_19' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 84 [2/2] (0.64ns) (root node of the DSP)   --->   "%tmp19 = add i10 %mul_i_i_19, i10 %A_0_load_cast"   --->   Operation 84 'add' 'tmp19' <Predicate = (do_init)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 2.89>
+ST_6 : Operation 85 [1/1] (0.00ns)   --->   "%i3 = phi i5 0, void %entry, i5 %i, void %for.inc.19, i5 0, void %for.end21"   --->   Operation 85 'phi' 'i3' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 86 [1/1] (0.00ns)   --->   "%phi_mul = phi i10 0, void %entry, i10 %next_mul, void %for.inc.19, i10 0, void %for.end21"   --->   Operation 86 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 87 [1/1] (0.00ns)   --->   "%p_shl14 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %A_0_load_3, i2 0"   --->   Operation 87 'bitconcatenate' 'p_shl14' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 88 [1/1] (0.00ns)   --->   "%p_shl14_cast = sext i7 %p_shl14"   --->   Operation 88 'sext' 'p_shl14_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 89 [1/1] (0.00ns)   --->   "%p_shl12 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %A_0_load_4, i3 0"   --->   Operation 89 'bitconcatenate' 'p_shl12' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 90 [1/1] (0.00ns)   --->   "%p_shl12_cast = sext i8 %p_shl12"   --->   Operation 90 'sext' 'p_shl12_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 91 [1/1] (0.00ns)   --->   "%p_shl13 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %A_0_load_4, i1 0"   --->   Operation 91 'bitconcatenate' 'p_shl13' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 92 [1/1] (0.00ns)   --->   "%p_shl13_cast = sext i6 %p_shl13"   --->   Operation 92 'sext' 'p_shl13_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 93 [1/1] (0.70ns)   --->   "%mul_i_i_6 = sub i9 %p_shl12_cast, i9 %p_shl13_cast"   --->   Operation 93 'sub' 'mul_i_i_6' <Predicate = (do_init)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 94 [1/1] (0.00ns)   --->   "%mul_i_i_6_cast = sext i9 %mul_i_i_6"   --->   Operation 94 'sext' 'mul_i_i_6_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 95 [1/2] (0.66ns)   --->   "%A_0_load_5 = load i4 %A_0_addr_6"   --->   Operation 95 'load' 'A_0_load_5' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_6 : Operation 96 [1/1] (0.00ns)   --->   "%A_0_load_6_cast24 = sext i5 %A_0_load_5"   --->   Operation 96 'sext' 'A_0_load_6_cast24' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 97 [1/1] (0.00ns)   --->   "%p_shl11 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %A_0_load_5, i3 0"   --->   Operation 97 'bitconcatenate' 'p_shl11' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 98 [1/1] (0.00ns)   --->   "%p_shl11_cast = sext i8 %p_shl11"   --->   Operation 98 'sext' 'p_shl11_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 99 [1/1] (0.70ns)   --->   "%mul_i_i_7 = sub i9 %p_shl11_cast, i9 %A_0_load_6_cast24"   --->   Operation 99 'sub' 'mul_i_i_7' <Predicate = (do_init)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 100 [1/1] (0.00ns)   --->   "%mul_i_i_7_cast = sext i9 %mul_i_i_7"   --->   Operation 100 'sext' 'mul_i_i_7_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 101 [1/2] (0.66ns)   --->   "%A_0_load_6 = load i4 %A_0_addr_7"   --->   Operation 101 'load' 'A_0_load_6' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_6 : Operation 102 [1/1] (0.00ns)   --->   "%A_0_addr_8 = getelementptr i5 %A_0, i64 0, i64 9"   --->   Operation 102 'getelementptr' 'A_0_addr_8' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 103 [2/2] (0.66ns)   --->   "%A_0_load_7 = load i4 %A_0_addr_8"   --->   Operation 103 'load' 'A_0_load_7' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_6 : Operation 104 [1/3] (0.00ns) (grouped into DSP with root node tmp10)   --->   "%mul_i_i_11 = mul i10 %A_1_load_1_cast, i10 11"   --->   Operation 104 'mul' 'mul_i_i_11' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 105 [1/1] (0.00ns)   --->   "%p_shl6 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %A_1_load_2, i4 0"   --->   Operation 105 'bitconcatenate' 'p_shl6' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 106 [1/1] (0.00ns)   --->   "%p_shl6_cast = sext i9 %p_shl6"   --->   Operation 106 'sext' 'p_shl6_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 107 [1/1] (0.00ns)   --->   "%p_shl7 = bitconcatenate i7 @_ssdm_op_BitConcatenate.i7.i5.i2, i5 %A_1_load_2, i2 0"   --->   Operation 107 'bitconcatenate' 'p_shl7' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 108 [1/1] (0.00ns)   --->   "%p_shl7_cast = sext i7 %p_shl7"   --->   Operation 108 'sext' 'p_shl7_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 109 [1/1] (0.71ns)   --->   "%mul_i_i_12 = sub i10 %p_shl6_cast, i10 %p_shl7_cast"   --->   Operation 109 'sub' 'mul_i_i_12' <Predicate = (do_init)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 110 [2/3] (0.99ns) (grouped into DSP with root node tmp13)   --->   "%mul_i_i_13 = mul i10 %A_1_load_3_cast, i10 13"   --->   Operation 110 'mul' 'mul_i_i_13' <Predicate = (do_init)> <Delay = 0.99> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 111 [1/2] (0.66ns)   --->   "%A_1_load_5 = load i4 %A_1_addr_5"   --->   Operation 111 'load' 'A_1_load_5' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_6 : Operation 112 [1/2] (0.66ns)   --->   "%A_1_load_6 = load i4 %A_1_addr_6"   --->   Operation 112 'load' 'A_1_load_6' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_6 : Operation 113 [1/1] (0.00ns)   --->   "%A_1_addr_7 = getelementptr i5 %A_1, i64 0, i64 7"   --->   Operation 113 'getelementptr' 'A_1_addr_7' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 114 [2/2] (0.66ns)   --->   "%A_1_load_7 = load i4 %A_1_addr_7"   --->   Operation 114 'load' 'A_1_load_7' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_6 : Operation 115 [1/1] (0.00ns)   --->   "%A_1_addr_8 = getelementptr i5 %A_1, i64 0, i64 8"   --->   Operation 115 'getelementptr' 'A_1_addr_8' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 116 [2/2] (0.66ns)   --->   "%A_1_load_8 = load i4 %A_1_addr_8"   --->   Operation 116 'load' 'A_1_load_8' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_6 : Operation 117 [1/1] (0.00ns)   --->   "%tmp2_cast = sext i9 %tmp2"   --->   Operation 117 'sext' 'tmp2_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 118 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp5 = add i10 %mul_i_i_6_cast, i10 %mul_i_i_7_cast"   --->   Operation 118 'add' 'tmp5' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 119 [1/1] (0.79ns) (root node of TernaryAdder)   --->   "%tmp4 = add i10 %tmp5, i10 %p_shl14_cast"   --->   Operation 119 'add' 'tmp4' <Predicate = (do_init)> <Delay = 0.79> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 120 [1/1] (0.00ns)   --->   "%tmp4_cast = sext i10 %tmp4"   --->   Operation 120 'sext' 'tmp4_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_6 : Operation 121 [1/1] (0.72ns)   --->   "%tmp1 = add i11 %tmp4_cast, i11 %tmp2_cast"   --->   Operation 121 'add' 'tmp1' <Predicate = (do_init)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 122 [2/2] (0.64ns) (root node of the DSP)   --->   "%tmp10 = add i10 %mul_i_i_11, i10 %mul_i_i_12"   --->   Operation 122 'add' 'tmp10' <Predicate = (do_init)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 123 [1/2] (0.64ns) (root node of the DSP)   --->   "%tmp19 = add i10 %mul_i_i_19, i10 %A_0_load_cast"   --->   Operation 123 'add' 'tmp19' <Predicate = (do_init)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 124 [1/1] (0.00ns)   --->   "%empty = trunc i5 %i3" [loop_perfect.cpp:23]   --->   Operation 124 'trunc' 'empty' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 125 [1/1] (0.00ns)   --->   "%empty_10 = trunc i5 %i3" [loop_perfect.cpp:23]   --->   Operation 125 'trunc' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 126 [1/1] (0.63ns)   --->   "%empty_11 = icmp_ult  i5 %i3, i5 10" [loop_perfect.cpp:23]   --->   Operation 126 'icmp' 'empty_11' <Predicate = true> <Delay = 0.63> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.63> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 127 [1/1] (0.70ns)   --->   "%empty_12 = add i4 %empty, i4 6" [loop_perfect.cpp:23]   --->   Operation 127 'add' 'empty_12' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 128 [1/1] (0.35ns)   --->   "%empty_13 = select i1 %empty_11, i4 %empty, i4 %empty_12" [loop_perfect.cpp:23]   --->   Operation 128 'select' 'empty_13' <Predicate = true> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_6 : Operation 129 [1/1] (0.00ns)   --->   "%tmp_4 = bitselect i1 @_ssdm_op_BitSelect.i1.i10.i32, i10 %phi_mul, i32 9" [loop_perfect.cpp:31]   --->   Operation 129 'bitselect' 'tmp_4' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 130 [1/1] (0.00ns)   --->   "%br_ln28 = br i1 %empty_10, void %if.then9.19, void %if.else.19" [loop_perfect.cpp:28]   --->   Operation 130 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 131 [1/1] (0.00ns)   --->   "%br_ln29 = br i1 %tmp_4, void %arrayidx13.0.0.09129.case.0, void %arrayidx13.0.0.09129.case.1" [loop_perfect.cpp:29]   --->   Operation 131 'br' 'br_ln29' <Predicate = (!empty_10)> <Delay = 0.00>
+ST_6 : Operation 132 [1/1] (0.00ns)   --->   "%br_ln29 = br void %for.inc.19" [loop_perfect.cpp:29]   --->   Operation 132 'br' 'br_ln29' <Predicate = (!empty_10)> <Delay = 0.00>
+ST_6 : Operation 133 [1/1] (0.00ns)   --->   "%br_ln31 = br i1 %tmp_4, void %arrayidx13.0.0.09129.case.02, void %arrayidx13.0.0.09129.case.13" [loop_perfect.cpp:31]   --->   Operation 133 'br' 'br_ln31' <Predicate = (empty_10)> <Delay = 0.00>
+ST_6 : Operation 134 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.19"   --->   Operation 134 'br' 'br_ln0' <Predicate = (empty_10)> <Delay = 0.00>
+ST_6 : Operation 135 [1/1] (0.63ns)   --->   "%icmp_ln23 = icmp_eq  i5 %i3, i5 19" [loop_perfect.cpp:23]   --->   Operation 135 'icmp' 'icmp_ln23' <Predicate = true> <Delay = 0.63> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.63> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 136 [1/1] (0.00ns)   --->   "%br_ln23 = br i1 %icmp_ln23, void %rewind_header, void %for.end21" [loop_perfect.cpp:23]   --->   Operation 136 'br' 'br_ln23' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 137 [1/1] (0.00ns)   --->   "%br_ln35 = br void %rewind_header" [loop_perfect.cpp:35]   --->   Operation 137 'br' 'br_ln35' <Predicate = (icmp_ln23)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 2.86>
+ST_7 : Operation 138 [1/1] (0.00ns)   --->   "%A_0_load_4_cast = sext i5 %A_0_load_3"   --->   Operation 138 'sext' 'A_0_load_4_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 139 [1/1] (0.00ns)   --->   "%mul_i_i_8 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %A_0_load_6, i3 0"   --->   Operation 139 'bitconcatenate' 'mul_i_i_8' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 140 [1/1] (0.00ns)   --->   "%mul_i_i_8_cast = sext i8 %mul_i_i_8"   --->   Operation 140 'sext' 'mul_i_i_8_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 141 [1/2] (0.66ns)   --->   "%A_0_load_7 = load i4 %A_0_addr_8"   --->   Operation 141 'load' 'A_0_load_7' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_7 : Operation 142 [1/1] (0.00ns)   --->   "%A_0_load_8_cast30 = sext i5 %A_0_load_7"   --->   Operation 142 'sext' 'A_0_load_8_cast30' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 143 [1/1] (0.00ns)   --->   "%p_shl10 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %A_0_load_7, i3 0"   --->   Operation 143 'bitconcatenate' 'p_shl10' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 144 [1/1] (0.00ns)   --->   "%p_shl10_cast = sext i8 %p_shl10"   --->   Operation 144 'sext' 'p_shl10_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 145 [1/1] (0.00ns)   --->   "%p_shl8 = bitconcatenate i8 @_ssdm_op_BitConcatenate.i8.i5.i3, i5 %A_1_load, i3 0"   --->   Operation 145 'bitconcatenate' 'p_shl8' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 146 [1/1] (0.00ns)   --->   "%p_shl8_cast = sext i8 %p_shl8"   --->   Operation 146 'sext' 'p_shl8_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 147 [1/1] (0.00ns)   --->   "%p_shl9 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %A_1_load, i1 0"   --->   Operation 147 'bitconcatenate' 'p_shl9' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 148 [1/1] (0.00ns)   --->   "%p_shl9_cast = sext i6 %p_shl9"   --->   Operation 148 'sext' 'p_shl9_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 149 [1/3] (0.00ns) (grouped into DSP with root node tmp13)   --->   "%mul_i_i_13 = mul i10 %A_1_load_3_cast, i10 13"   --->   Operation 149 'mul' 'mul_i_i_13' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 150 [1/1] (0.00ns) (grouped into DSP with root node tmp13)   --->   "%mul_i_i_13_cast = sext i10 %mul_i_i_13"   --->   Operation 150 'sext' 'mul_i_i_13_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 151 [1/1] (0.00ns)   --->   "%p_shl4 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %A_1_load_4, i4 0"   --->   Operation 151 'bitconcatenate' 'p_shl4' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 152 [1/1] (0.00ns)   --->   "%p_shl4_cast = sext i9 %p_shl4"   --->   Operation 152 'sext' 'p_shl4_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 153 [1/1] (0.00ns)   --->   "%p_shl5 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %A_1_load_4, i1 0"   --->   Operation 153 'bitconcatenate' 'p_shl5' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 154 [1/1] (0.00ns)   --->   "%p_shl5_cast = sext i6 %p_shl5"   --->   Operation 154 'sext' 'p_shl5_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 155 [1/1] (0.71ns)   --->   "%mul_i_i_14 = sub i10 %p_shl4_cast, i10 %p_shl5_cast"   --->   Operation 155 'sub' 'mul_i_i_14' <Predicate = (do_init)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 156 [1/1] (0.00ns)   --->   "%mul_i_i_14_cast = sext i10 %mul_i_i_14"   --->   Operation 156 'sext' 'mul_i_i_14_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 157 [1/1] (0.00ns)   --->   "%A_1_load_5_cast28 = sext i5 %A_1_load_5"   --->   Operation 157 'sext' 'A_1_load_5_cast28' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 158 [1/1] (0.00ns)   --->   "%p_shl3 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %A_1_load_5, i4 0"   --->   Operation 158 'bitconcatenate' 'p_shl3' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 159 [1/1] (0.00ns)   --->   "%p_shl3_cast = sext i9 %p_shl3"   --->   Operation 159 'sext' 'p_shl3_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 160 [1/1] (0.71ns)   --->   "%mul_i_i_15 = sub i10 %p_shl3_cast, i10 %A_1_load_5_cast28"   --->   Operation 160 'sub' 'mul_i_i_15' <Predicate = (do_init)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 161 [1/1] (0.00ns)   --->   "%mul_i_i_15_cast = sext i10 %mul_i_i_15"   --->   Operation 161 'sext' 'mul_i_i_15_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 162 [1/1] (0.00ns)   --->   "%mul_i_i_s = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %A_1_load_6, i4 0"   --->   Operation 162 'bitconcatenate' 'mul_i_i_s' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 163 [1/1] (0.00ns)   --->   "%mul_i_i_16_cast = sext i9 %mul_i_i_s"   --->   Operation 163 'sext' 'mul_i_i_16_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 164 [1/2] (0.66ns)   --->   "%A_1_load_7 = load i4 %A_1_addr_7"   --->   Operation 164 'load' 'A_1_load_7' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_7 : Operation 165 [1/1] (0.00ns)   --->   "%A_1_load_7_cast31 = sext i5 %A_1_load_7"   --->   Operation 165 'sext' 'A_1_load_7_cast31' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 166 [1/1] (0.00ns)   --->   "%p_shl2 = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %A_1_load_7, i4 0"   --->   Operation 166 'bitconcatenate' 'p_shl2' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 167 [1/1] (0.00ns)   --->   "%p_shl2_cast = sext i9 %p_shl2"   --->   Operation 167 'sext' 'p_shl2_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 168 [1/2] (0.66ns)   --->   "%A_1_load_8 = load i4 %A_1_addr_8"   --->   Operation 168 'load' 'A_1_load_8' <Predicate = (do_init)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 5> <Depth = 10> <RAM>
+ST_7 : Operation 169 [1/1] (0.00ns)   --->   "%p_shl = bitconcatenate i9 @_ssdm_op_BitConcatenate.i9.i5.i4, i5 %A_1_load_8, i4 0"   --->   Operation 169 'bitconcatenate' 'p_shl' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 170 [1/1] (0.00ns)   --->   "%p_shl_cast = sext i9 %p_shl"   --->   Operation 170 'sext' 'p_shl_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 171 [1/1] (0.00ns)   --->   "%p_shl1 = bitconcatenate i6 @_ssdm_op_BitConcatenate.i6.i5.i1, i5 %A_1_load_8, i1 0"   --->   Operation 171 'bitconcatenate' 'p_shl1' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 172 [1/1] (0.00ns)   --->   "%p_shl1_cast = sext i6 %p_shl1"   --->   Operation 172 'sext' 'p_shl1_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 173 [1/1] (0.70ns)   --->   "%tmp8 = add i9 %p_shl10_cast, i9 %p_shl9_cast"   --->   Operation 173 'add' 'tmp8' <Predicate = (do_init)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 174 [1/1] (0.00ns)   --->   "%tmp8_cast = sext i9 %tmp8"   --->   Operation 174 'sext' 'tmp8_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 175 [1/1] (0.71ns)   --->   "%tmp7 = add i10 %tmp8_cast, i10 %mul_i_i_8_cast"   --->   Operation 175 'add' 'tmp7' <Predicate = (do_init)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 176 [1/1] (0.00ns)   --->   "%tmp7_cast = sext i10 %tmp7"   --->   Operation 176 'sext' 'tmp7_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 177 [1/2] (0.64ns) (root node of the DSP)   --->   "%tmp10 = add i10 %mul_i_i_11, i10 %mul_i_i_12"   --->   Operation 177 'add' 'tmp10' <Predicate = (do_init)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 178 [1/1] (0.00ns)   --->   "%tmp10_cast = sext i10 %tmp10"   --->   Operation 178 'sext' 'tmp10_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 179 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp9 = add i11 %tmp10_cast, i11 %p_shl8_cast"   --->   Operation 179 'add' 'tmp9' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 180 [1/1] (0.77ns) (root node of TernaryAdder)   --->   "%tmp6 = add i11 %tmp9, i11 %tmp7_cast"   --->   Operation 180 'add' 'tmp6' <Predicate = (do_init)> <Delay = 0.77> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 181 [1/1] (0.72ns)   --->   "%tmp14 = add i11 %mul_i_i_14_cast, i11 %mul_i_i_15_cast"   --->   Operation 181 'add' 'tmp14' <Predicate = (do_init)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 182 [2/2] (0.64ns) (root node of the DSP)   --->   "%tmp13 = add i11 %tmp14, i11 %mul_i_i_13_cast"   --->   Operation 182 'add' 'tmp13' <Predicate = (do_init)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 183 [1/1] (0.71ns)   --->   "%tmp16 = add i10 %p_shl2_cast, i10 %p_shl1_cast"   --->   Operation 183 'add' 'tmp16' <Predicate = (do_init)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 184 [1/1] (0.00ns)   --->   "%tmp16_cast = sext i10 %tmp16"   --->   Operation 184 'sext' 'tmp16_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 185 [1/1] (0.72ns)   --->   "%tmp15 = add i11 %tmp16_cast, i11 %mul_i_i_16_cast"   --->   Operation 185 'add' 'tmp15' <Predicate = (do_init)> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 186 [1/1] (0.00ns)   --->   "%tmp19_cast = sext i10 %tmp19"   --->   Operation 186 'sext' 'tmp19_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 187 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp18 = add i11 %tmp19_cast, i11 %p_shl_cast"   --->   Operation 187 'add' 'tmp18' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_7 : Operation 188 [1/1] (0.70ns)   --->   "%tmp21 = add i6 %A_0_load_8_cast30, i6 %A_1_load_7_cast31"   --->   Operation 188 'add' 'tmp21' <Predicate = (do_init)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 189 [1/1] (0.00ns)   --->   "%tmp21_cast = sext i6 %tmp21"   --->   Operation 189 'sext' 'tmp21_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 190 [1/1] (0.70ns)   --->   "%tmp20 = add i7 %tmp21_cast, i7 %A_0_load_4_cast"   --->   Operation 190 'add' 'tmp20' <Predicate = (do_init)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 191 [1/1] (0.00ns)   --->   "%tmp20_cast = sext i7 %tmp20"   --->   Operation 191 'sext' 'tmp20_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_7 : Operation 192 [1/1] (0.77ns) (root node of TernaryAdder)   --->   "%tmp17 = add i11 %tmp20_cast, i11 %tmp18"   --->   Operation 192 'add' 'tmp17' <Predicate = (do_init)> <Delay = 0.77> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+
+State 8 <SV = 7> <Delay = 2.69>
+ST_8 : Operation 193 [1/1] (0.00ns)   --->   "%tmp1_cast = sext i11 %tmp1"   --->   Operation 193 'sext' 'tmp1_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_8 : Operation 194 [1/1] (0.00ns)   --->   "%tmp6_cast = sext i11 %tmp6"   --->   Operation 194 'sext' 'tmp6_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_8 : Operation 195 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp = add i12 %tmp6_cast, i12 %tmp1_cast"   --->   Operation 195 'add' 'tmp' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 196 [1/2] (0.64ns) (root node of the DSP)   --->   "%tmp13 = add i11 %tmp14, i11 %mul_i_i_13_cast"   --->   Operation 196 'add' 'tmp13' <Predicate = (do_init)> <Delay = 0.64> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 197 [1/1] (0.00ns)   --->   "%tmp13_cast = sext i11 %tmp13"   --->   Operation 197 'sext' 'tmp13_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_8 : Operation 198 [1/1] (0.00ns)   --->   "%tmp15_cast = sext i11 %tmp15"   --->   Operation 198 'sext' 'tmp15_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_8 : Operation 199 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%tmp12 = add i12 %tmp15_cast, i12 %tmp13_cast"   --->   Operation 199 'add' 'tmp12' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 200 [1/1] (0.00ns)   --->   "%tmp17_cast = sext i11 %tmp17"   --->   Operation 200 'sext' 'tmp17_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_8 : Operation 201 [1/1] (0.75ns) (root node of TernaryAdder)   --->   "%tmp11 = add i12 %tmp17_cast, i12 %tmp12"   --->   Operation 201 'add' 'tmp11' <Predicate = (do_init)> <Delay = 0.75> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 202 [1/1] (0.75ns) (root node of TernaryAdder)   --->   "%acc_V_1 = add i12 %tmp11, i12 %tmp"   --->   Operation 202 'add' 'acc_V_1' <Predicate = (do_init)> <Delay = 0.75> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 0.37> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 203 [1/1] (0.00ns)   --->   "%acc_V_1_cast = sext i12 %acc_V_1"   --->   Operation 203 'sext' 'acc_V_1_cast' <Predicate = (do_init)> <Delay = 0.00>
+ST_8 : Operation 204 [4/4] (0.53ns) (root node of the DSP)   --->   "%mul = mul i26 %acc_V_1_cast, i26 6554"   --->   Operation 204 'mul' 'mul' <Predicate = (do_init)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 205 [1/1] (0.00ns)   --->   "%tmp_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i12.i32, i12 %acc_V_1, i32 11"   --->   Operation 205 'bitselect' 'tmp_1' <Predicate = (do_init)> <Delay = 0.00>
+ST_8 : Operation 206 [1/1] (0.00ns)   --->   "%zext_ln21 = zext i4 %empty_13" [loop_perfect.cpp:21]   --->   Operation 206 'zext' 'zext_ln21' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 207 [1/1] (0.00ns)   --->   "%B_0_addr_1 = getelementptr i6 %B_0, i64 0, i64 %zext_ln21" [loop_perfect.cpp:31]   --->   Operation 207 'getelementptr' 'B_0_addr_1' <Predicate = (empty_10 & !tmp_4)> <Delay = 0.00>
+ST_8 : Operation 208 [1/1] (0.66ns)   --->   "%store_ln31 = store i6 0, i4 %B_0_addr_1" [loop_perfect.cpp:31]   --->   Operation 208 'store' 'store_ln31' <Predicate = (empty_10 & !tmp_4)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_8 : Operation 209 [1/1] (0.00ns)   --->   "%br_ln31 = br void %arrayidx13.0.0.09129.exit1" [loop_perfect.cpp:31]   --->   Operation 209 'br' 'br_ln31' <Predicate = (empty_10 & !tmp_4)> <Delay = 0.00>
+ST_8 : Operation 210 [1/1] (0.00ns)   --->   "%B_1_addr_1 = getelementptr i6 %B_1, i64 0, i64 %zext_ln21" [loop_perfect.cpp:31]   --->   Operation 210 'getelementptr' 'B_1_addr_1' <Predicate = (empty_10 & tmp_4)> <Delay = 0.00>
+ST_8 : Operation 211 [1/1] (0.66ns)   --->   "%store_ln31 = store i6 0, i4 %B_1_addr_1" [loop_perfect.cpp:31]   --->   Operation 211 'store' 'store_ln31' <Predicate = (empty_10 & tmp_4)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_8 : Operation 212 [1/1] (0.00ns)   --->   "%br_ln31 = br void %arrayidx13.0.0.09129.exit1" [loop_perfect.cpp:31]   --->   Operation 212 'br' 'br_ln31' <Predicate = (empty_10 & tmp_4)> <Delay = 0.00>
+
+State 9 <SV = 8> <Delay = 0.53>
+ST_9 : Operation 213 [3/4] (0.53ns) (root node of the DSP)   --->   "%mul = mul i26 %acc_V_1_cast, i26 6554"   --->   Operation 213 'mul' 'mul' <Predicate = (do_init)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 10 <SV = 9> <Delay = 0.72>
+ST_10 : Operation 214 [2/4] (0.53ns) (root node of the DSP)   --->   "%mul = mul i26 %acc_V_1_cast, i26 6554"   --->   Operation 214 'mul' 'mul' <Predicate = (do_init)> <Delay = 0.53> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_10 : Operation 215 [1/1] (0.72ns)   --->   "%next_mul = add i10 %phi_mul, i10 52"   --->   Operation 215 'add' 'next_mul' <Predicate = true> <Delay = 0.72> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 216 [1/1] (0.70ns)   --->   "%i = add i5 %i3, i5 1" [loop_perfect.cpp:23]   --->   Operation 216 'add' 'i' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 1.83>
+ST_11 : Operation 217 [1/1] (0.00ns)   --->   "%p_rewind = phi i6 0, void %entry, i6 %p_phi, void %for.inc.19, i6 0, void %for.end21"   --->   Operation 217 'phi' 'p_rewind' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 218 [1/1] (0.38ns)   --->   "%br_ln0 = br i1 %do_init, void %for.body3.split, void %rewind_init"   --->   Operation 218 'br' 'br_ln0' <Predicate = true> <Delay = 0.38>
+ST_11 : Operation 219 [1/1] (0.00ns)   --->   "%spectopmodule_ln19 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [loop_perfect.cpp:19]   --->   Operation 219 'spectopmodule' 'spectopmodule_ln19' <Predicate = (do_init)> <Delay = 0.00>
+ST_11 : Operation 220 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %A_0"   --->   Operation 220 'specbitsmap' 'specbitsmap_ln0' <Predicate = (do_init)> <Delay = 0.00>
+ST_11 : Operation 221 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i5 %A_1"   --->   Operation 221 'specbitsmap' 'specbitsmap_ln0' <Predicate = (do_init)> <Delay = 0.00>
+ST_11 : Operation 222 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %B_0"   --->   Operation 222 'specbitsmap' 'specbitsmap_ln0' <Predicate = (do_init)> <Delay = 0.00>
+ST_11 : Operation 223 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i6 %B_1"   --->   Operation 223 'specbitsmap' 'specbitsmap_ln0' <Predicate = (do_init)> <Delay = 0.00>
+ST_11 : Operation 224 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul = mul i26 %acc_V_1_cast, i26 6554"   --->   Operation 224 'mul' 'mul' <Predicate = (do_init)> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 127 'DSP48' <Latency = 3> <II = 1> <Delay = 0.53> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_11 : Operation 225 [1/1] (0.00ns)   --->   "%empty_14 = trunc i26 %mul"   --->   Operation 225 'trunc' 'empty_14' <Predicate = (do_init & tmp_1)> <Delay = 0.00>
+ST_11 : Operation 226 [1/1] (0.83ns)   --->   "%neg_mul = sub i25 0, i25 %empty_14"   --->   Operation 226 'sub' 'neg_mul' <Predicate = (do_init & tmp_1)> <Delay = 0.83> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.83> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 227 [1/1] (0.00ns) (grouped into LUT with out node neg_ti)   --->   "%tmp_2 = partselect i6 @_ssdm_op_PartSelect.i6.i25.i32.i32, i25 %neg_mul, i32 17, i32 22"   --->   Operation 227 'partselect' 'tmp_2' <Predicate = (do_init & tmp_1)> <Delay = 0.00>
+ST_11 : Operation 228 [1/1] (0.00ns)   --->   "%tmp_3 = partselect i6 @_ssdm_op_PartSelect.i6.i26.i32.i32, i26 %mul, i32 17, i32 22"   --->   Operation 228 'partselect' 'tmp_3' <Predicate = (do_init)> <Delay = 0.00>
+ST_11 : Operation 229 [1/1] (0.00ns) (grouped into LUT with out node neg_ti)   --->   "%empty_15 = select i1 %tmp_1, i6 %tmp_2, i6 %tmp_3"   --->   Operation 229 'select' 'empty_15' <Predicate = (do_init & tmp_1)> <Delay = 0.00> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 230 [1/1] (0.70ns) (out node of the LUT)   --->   "%neg_ti = sub i6 0, i6 %empty_15"   --->   Operation 230 'sub' 'neg_ti' <Predicate = (do_init & tmp_1)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 231 [1/1] (0.29ns)   --->   "%empty_16 = select i1 %tmp_1, i6 %neg_ti, i6 %tmp_3"   --->   Operation 231 'select' 'empty_16' <Predicate = (do_init)> <Delay = 0.29> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.29> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 232 [1/1] (0.38ns)   --->   "%br_ln23 = br void %for.body3.split" [loop_perfect.cpp:23]   --->   Operation 232 'br' 'br_ln23' <Predicate = (do_init)> <Delay = 0.38>
+
+State 12 <SV = 11> <Delay = 0.66>
+ST_12 : Operation 233 [1/1] (0.00ns)   --->   "%p_phi = phi i6 %empty_16, void %rewind_init, i6 %p_rewind, void %rewind_header"   --->   Operation 233 'phi' 'p_phi' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 234 [1/1] (0.00ns)   --->   "%empty_9 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 20, i64 20, i64 20"   --->   Operation 234 'speclooptripcount' 'empty_9' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 235 [1/1] (0.00ns)   --->   "%specpipeline_ln10 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_0" [Z:/ECC/Desktop/Winter2023/ELEN226/Perfect/proj_loop_perfect/solution6/directives.tcl:10]   --->   Operation 235 'specpipeline' 'specpipeline_ln10' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 236 [1/1] (0.00ns)   --->   "%specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [loop_perfect.cpp:20]   --->   Operation 236 'specloopname' 'specloopname_ln20' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 237 [1/1] (0.00ns)   --->   "%B_0_addr = getelementptr i6 %B_0, i64 0, i64 %zext_ln21" [loop_perfect.cpp:29]   --->   Operation 237 'getelementptr' 'B_0_addr' <Predicate = (!empty_10 & !tmp_4)> <Delay = 0.00>
+ST_12 : Operation 238 [1/1] (0.66ns)   --->   "%store_ln29 = store i6 %p_phi, i4 %B_0_addr" [loop_perfect.cpp:29]   --->   Operation 238 'store' 'store_ln29' <Predicate = (!empty_10 & !tmp_4)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_12 : Operation 239 [1/1] (0.00ns)   --->   "%br_ln29 = br void %arrayidx13.0.0.09129.exit" [loop_perfect.cpp:29]   --->   Operation 239 'br' 'br_ln29' <Predicate = (!empty_10 & !tmp_4)> <Delay = 0.00>
+ST_12 : Operation 240 [1/1] (0.00ns)   --->   "%B_1_addr = getelementptr i6 %B_1, i64 0, i64 %zext_ln21" [loop_perfect.cpp:29]   --->   Operation 240 'getelementptr' 'B_1_addr' <Predicate = (!empty_10 & tmp_4)> <Delay = 0.00>
+ST_12 : Operation 241 [1/1] (0.66ns)   --->   "%store_ln29 = store i6 %p_phi, i4 %B_1_addr" [loop_perfect.cpp:29]   --->   Operation 241 'store' 'store_ln29' <Predicate = (!empty_10 & tmp_4)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_12 : Operation 242 [1/1] (0.00ns)   --->   "%br_ln29 = br void %arrayidx13.0.0.09129.exit" [loop_perfect.cpp:29]   --->   Operation 242 'br' 'br_ln29' <Predicate = (!empty_10 & tmp_4)> <Delay = 0.00>
+ST_12 : Operation 243 [1/1] (0.00ns)   --->   "%return_ln35 = return void @_ssdm_op_Return" [loop_perfect.cpp:35]   --->   Operation 243 'return' 'return_ln35' <Predicate = (icmp_ln23)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 0.387ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('do_init') [11]  (0.387 ns)
+
+ <State 2>: 0.667ns
+The critical path consists of the following:
+	'getelementptr' operation ('A_0_addr') [22]  (0 ns)
+	'load' operation ('acc.V') on array 'A_0' [23]  (0.667 ns)
+
+ <State 3>: 1.66ns
+The critical path consists of the following:
+	'load' operation ('A_1_load_9') on array 'A_1' [122]  (0.667 ns)
+	'mul' operation of DSP[151] ('mul_i_i_19') [124]  (0.996 ns)
+
+ <State 4>: 2.19ns
+The critical path consists of the following:
+	'load' operation ('A_0_load_1') on array 'A_0' [30]  (0.667 ns)
+	'sub' operation ('mul_i_i_3') [34]  (0.706 ns)
+	'add' operation ('tmp3') [125]  (0 ns)
+	'add' operation ('tmp2') [126]  (0.818 ns)
+
+ <State 5>: 0.996ns
+The critical path consists of the following:
+	'mul' operation of DSP[137] ('mul_i_i_11') [78]  (0.996 ns)
+
+ <State 6>: 2.89ns
+The critical path consists of the following:
+	'load' operation ('A_0_load_5') on array 'A_0' [54]  (0.667 ns)
+	'sub' operation ('mul_i_i_7') [58]  (0.705 ns)
+	'add' operation ('tmp5') [128]  (0 ns)
+	'add' operation ('tmp4') [129]  (0.797 ns)
+	'add' operation ('tmp1') [131]  (0.725 ns)
+
+ <State 7>: 2.86ns
+The critical path consists of the following:
+	'load' operation ('A_0_load_7') on array 'A_0' [65]  (0.667 ns)
+	'add' operation ('tmp8') [133]  (0.705 ns)
+	'add' operation ('tmp7') [135]  (0.715 ns)
+	'add' operation ('tmp6') [140]  (0.777 ns)
+
+ <State 8>: 2.69ns
+The critical path consists of the following:
+	'add' operation of DSP[144] ('tmp13') [144]  (0.645 ns)
+	'add' operation ('tmp12') [150]  (0 ns)
+	'add' operation ('tmp11') [160]  (0.756 ns)
+	'add' operation ('acc.V') [161]  (0.756 ns)
+	'mul' operation of DSP[163] ('mul') [163]  (0.535 ns)
+
+ <State 9>: 0.535ns
+The critical path consists of the following:
+	'mul' operation of DSP[163] ('mul') [163]  (0.535 ns)
+
+ <State 10>: 0.725ns
+The critical path consists of the following:
+	'add' operation ('next_mul') [180]  (0.725 ns)
+
+ <State 11>: 1.84ns
+The critical path consists of the following:
+	'mul' operation of DSP[163] ('mul') [163]  (0 ns)
+	'sub' operation ('neg_mul') [165]  (0.838 ns)
+	'select' operation ('empty_15') [169]  (0 ns)
+	'sub' operation ('neg_ti') [170]  (0.706 ns)
+	'select' operation ('empty_16') [171]  (0.293 ns)
+
+ <State 12>: 0.667ns
+The critical path consists of the following:
+	'phi' operation ('p_phi') with incoming values : ('empty_16') [174]  (0 ns)
+	'store' operation ('store_ln29', loop_perfect.cpp:29) of variable 'p_phi' on array 'B_1' [196]  (0.667 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

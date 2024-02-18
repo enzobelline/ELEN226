@@ -1,0 +1,129 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "inner_product",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment2\/InnerProduct\/solution5\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "inner_product"
+              }]
+          }
+        },
+        {
+          "functionName": "inner_product",
+          "label": "inner_product_loop",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment2\/InnerProduct\/solution5\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [
+              {
+                "name": "II",
+                "value": "1"
+              },
+              {
+                "name": "rewind",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "inner_product",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment2\/InnerProduct\/solution5\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "a"
+              },
+              {
+                "name": "block",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "4"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "inner_product",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment2\/InnerProduct\/solution5\/directives.tcl",
+          "sourceLine": "9",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "b"
+              },
+              {
+                "name": "block",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "4"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "inner_product",
+          "label": "inner_product_loop",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment2\/InnerProduct\/solution5\/directives.tcl",
+          "sourceLine": "10",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "4"
+              }]
+          }
+        },
+        {
+          "functionName": "inner_product",
+          "label": "",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment2\/InnerProduct\/solution5\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "inner_product"
+              }]
+          }
+        }
+      ]
+    }]}

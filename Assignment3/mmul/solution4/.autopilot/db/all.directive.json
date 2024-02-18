@@ -1,0 +1,119 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "mmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution4\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mmul"
+              }]
+          }
+        },
+        {
+          "functionName": "mmul",
+          "label": "prod",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution4\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "mmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution4\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "a"
+              },
+              {
+                "name": "complete",
+                "value": ""
+              },
+              {
+                "name": "dim",
+                "value": "0"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "mmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution4\/directives.tcl",
+          "sourceLine": "9",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "b"
+              },
+              {
+                "name": "complete",
+                "value": ""
+              },
+              {
+                "name": "dim",
+                "value": "0"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "mmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution4\/directives.tcl",
+          "sourceLine": "10",
+          "pragma": {
+            "name": "ALLOCATION",
+            "option": [
+              {
+                "name": "operation",
+                "value": ""
+              },
+              {
+                "name": "instances",
+                "value": "mul"
+              },
+              {
+                "name": "limit",
+                "value": "72"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "mmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution4\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mmul"
+              }]
+          }
+        }
+      ]
+    }]}

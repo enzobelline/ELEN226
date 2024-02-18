@@ -1,0 +1,44 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "mmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution2\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mmul"
+              }]
+          }
+        },
+        {
+          "functionName": "mmul",
+          "label": "prod",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution2\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "mmul",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Assignment3\/mmul\/solution2\/csynth.tcl",
+          "sourceLine": "17",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "mmul"
+              }]
+          }
+        }
+      ]
+    }]}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="mmul.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment3\mmul.cpp"/>
+    <originFiles name="mmul.h" path="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment3\mmul.h"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_mmul.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment3\tb_mmul.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

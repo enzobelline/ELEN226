@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Feb 17 16:48:01 2023
+# Process ID: 13284
+# Current directory: Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution3/impl/verilog
+# Command line: vivado.exe -mode batch -source run_vivado.tcl
+# Log file: Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution3/impl/verilog/vivado.log
+# Journal file: Z:/ECC/Desktop/Winter2023/ELEN226/Assignment3/mmul/solution3/impl/verilog\vivado.jou
+# Running On: winvdi1008, OS: Windows, CPU Frequency: 2394 MHz, CPU Physical cores: 4, Host memory: 8588 MB
+#-----------------------------------------------------------
+source run_vivado.tcl

@@ -1,0 +1,24 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.1
+Project:             mmul
+Solution:            solution1
+Device target:       xc7k160t-fbg676-2
+Report date:         Fri Feb 17 15:22:46 -0800 2023
+
+#=== Post-Implementation Resource usage ===
+SLICE:           16
+LUT:             31
+FF:              64
+DSP:              1
+BRAM:             0
+URAM:             0
+LATCH:            0
+SRL:              0
+CLB:              0
+
+#=== Final timing ===
+CP required:                     4.000
+CP achieved post-synthesis:      2.654
+CP achieved post-implementation: 2.291
+Timing met

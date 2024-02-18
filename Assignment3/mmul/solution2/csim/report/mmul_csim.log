@@ -1,0 +1,28 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb_mmul.cpp in debug mode
+   Compiling ../../../../mmul.cpp in debug mode
+   Generating csim.exe
+matrix a
+5	17	16	4	
+17	10	12	0	
+16	2	17	11	
+matrix b
+7	15	7	5	7	8	
+3	0	9	6	14	9	
+4	16	15	14	8	5	
+11	0	11	0	15	4	
+mpy count = 72
+reference data
+194	331	472	351	461	289	
+197	447	389	313	355	286	
+307	512	506	330	441	275	
+
+HLS data
+194	331	472	351	461	289	
+197	447	389	313	355	286	
+307	512	506	330	441	275	
+error count = 0
+HLS matrix product matches golden reference data
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

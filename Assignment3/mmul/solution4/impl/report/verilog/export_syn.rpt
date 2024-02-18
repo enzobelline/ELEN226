@@ -1,0 +1,182 @@
+================================================================
+== Vivado RTL Synthesis Results
+================================================================
++ General Information:
+    * Date:            Fri Feb 17 17:12:43 -0800 2023
+    * Version:         2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:         mmul
+    * Solution:        solution4 (Vivado IP Flow Target)
+    * Product family:  kintex7
+    * Target device:   xc7k160t-fbg676-2
+
+
+================================================================
+== Run Constraints & Options
+================================================================
++ Design Constraints & Options:
+    * RTL Synthesis target clock:  4 ns
+    * C-Synthesis target clock:    4 ns
+    * C-Synthesis uncertainty:     27%
+
++ RTL Synthesis Options:
+    * config_export -vivado_synth_strategy:     default
+    * config_export -vivado_synth_design_args:  -directive sdx_optimization_effort_high
+
++ Reporting Options:
+    * config_export -vivado_report_level:      2
+    * config_export -vivado_max_timing_paths:  10
+
+
+================================================================
+== RTL Synthesis Resource Summary
+================================================================
+LUT:              348
+FF:               1035
+DSP:              1
+BRAM:             0
+URAM:             0
+SRL:              7
+
+
+================================================================
+== RTL Synthesis Timing Summary
+================================================================
+* Timing was met
++------------+-------------+
+| Timing     | Period (ns) |
++------------+-------------+
+| Target     | 4.000       |
+| Post-Route | 3.229       |
++------------+-------------+
+
+
+================================================================
+== RTL Synthesis Resources
+================================================================
++----------------------------+-----+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| Name                       | LUT | FF   | DSP | BRAM | URAM | SRL | Pragma | Impl | Latency | Variable | Source |
++----------------------------+-----+------+-----+------+------+-----+--------+------+---------+----------+--------+
+| inst                       | 348 | 1035 | 1   |      |      |     |        |      |         |          |        |
+|   (inst)                   | 115 | 1034 | 1   |      |      |     |        |      |         |          |        |
+|   flow_control_loop_pipe_U | 27  | 1    |     |      |      |     |        |      |         |          |        |
+|   mux_43_16_1_1_U14        | 206 |      |     |      |      |     |        |      |         |          |        |
++----------------------------+-----+------+-----+------+------+-----+--------+------+---------+----------+--------+
+
+
+================================================================
+== RTL Synthesis Fail Fast
+================================================================
++-----------------------------------------------------------+-----------+--------+--------+
+| Criteria                                                  | Guideline | Actual | Status |
++-----------------------------------------------------------+-----------+--------+--------+
+| LUT                                                       | 70%       | 0.34%  | OK     |
+| FD                                                        | 50%       | 0.51%  | OK     |
+| LUTRAM+SRL                                                | 25%       | 0.02%  | OK     |
+| MUXF7                                                     | 15%       | 0.00%  | OK     |
+| DSP                                                       | 80%       | 0.17%  | OK     |
+| RAMB/FIFO                                                 | 80%       | 0.00%  | OK     |
+| DSP+RAMB+URAM (Avg)                                       | 70%       | 0.17%  | OK     |
+| BUFGCE* + BUFGCTRL                                        | 24        | 0      | OK     |
+| DONT_TOUCH (cells/nets)                                   | 0         | 0      | OK     |
+| MARK_DEBUG (nets)                                         | 0         | 0      | OK     |
+| Control Sets                                              | 1901      | 6      | OK     |
+| Average Fanout for modules > 100k cells                   | 4         | 0      | OK     |
+| Non-FD high fanout nets > 10k loads                       | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| TIMING-6 (No common primary clock between related clocks) | 0         | 0      | OK     |
+| TIMING-7 (No common node between related clocks)          | 0         | 0      | OK     |
+| TIMING-8 (No common period between related clocks)        | 0         | 0      | OK     |
+| TIMING-14 (LUT on the clock tree)                         | 0         | 0      | OK     |
+| TIMING-35 (No common node in paths with the same clock)   | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+| Number of paths above max LUT budgeting (0.500ns)         | 0         | 0      | OK     |
+| Number of paths above max Net budgeting (0.350ns)         | 0         | 0      | OK     |
++-----------------------------------------------------------+-----------+--------+--------+
+
+
+================================================================
+== RTL Synthesis Timing Paths
+================================================================
+* Timing was met
++-------+-------+-----------------------------------------+------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path  | SLACK | STARTPOINT PIN                          | ENDPOINT PIN                 | LOGIC LEVELS | MAX FANOUT | DATAPATH DELAY | DATAPATH LOGIC | DATAPATH NET |
+|       |       |                                         |                              |              |            |                |          DELAY |        DELAY |
++-------+-------+-----------------------------------------+------------------------------+--------------+------------+----------------+----------------+--------------+
+| Path1 | 0.771 | and_ln8_reg_1404_pp0_iter1_reg_reg[0]/C | mul_ln859_reg_1475_reg/A[0]  |            4 |         26 |          2.906 |          0.485 |        2.421 |
+| Path2 | 0.771 | and_ln8_reg_1404_pp0_iter1_reg_reg[0]/C | mul_ln859_reg_1475_reg/A[10] |            4 |         26 |          2.906 |          0.485 |        2.421 |
+| Path3 | 0.771 | and_ln8_reg_1404_pp0_iter1_reg_reg[0]/C | mul_ln859_reg_1475_reg/A[11] |            4 |         26 |          2.906 |          0.485 |        2.421 |
+| Path4 | 0.771 | and_ln8_reg_1404_pp0_iter1_reg_reg[0]/C | mul_ln859_reg_1475_reg/A[12] |            4 |         26 |          2.906 |          0.485 |        2.421 |
+| Path5 | 0.771 | and_ln8_reg_1404_pp0_iter1_reg_reg[0]/C | mul_ln859_reg_1475_reg/A[13] |            4 |         26 |          2.906 |          0.485 |        2.421 |
++-------+-------+-----------------------------------------+------------------------------+--------------+------------+----------------+----------------+--------------+
+
+    +------------------------------------------------+----------------------+
+    | Path1 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | and_ln8_reg_1404_pp0_iter1_reg_reg[0]          | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_263 | LUT.others.LUT4      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_255 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_172 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_32  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path2 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | and_ln8_reg_1404_pp0_iter1_reg_reg[0]          | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_263 | LUT.others.LUT4      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_215 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_112 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_22  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path3 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | and_ln8_reg_1404_pp0_iter1_reg_reg[0]          | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_263 | LUT.others.LUT4      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_211 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_106 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_21  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path4 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | and_ln8_reg_1404_pp0_iter1_reg_reg[0]          | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_263 | LUT.others.LUT4      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_207 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_100 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_20  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+    +------------------------------------------------+----------------------+
+    | Path5 Cells                                    | Primitive Type       |
+    +------------------------------------------------+----------------------+
+    | and_ln8_reg_1404_pp0_iter1_reg_reg[0]          | FLOP_LATCH.flop.FDRE |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_263 | LUT.others.LUT4      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_203 | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_94  | LUT.others.LUT6      |
+    | mux_43_16_1_1_U14/mul_ln859_reg_1475_reg_i_19  | LUT.others.LUT6      |
+    | mul_ln859_reg_1475_reg                         | MULT.dsp.DSP48E1     |
+    +------------------------------------------------+----------------------+
+
+
+================================================================
+== RTL Synthesis Vivado Reports
+================================================================
++--------------------------+-------------------------------------------------------------+
+| Report Type              | Report Location                                             |
++--------------------------+-------------------------------------------------------------+
+| design_analysis          | impl/verilog/report/mmul_design_analysis_synth.rpt          |
+| failfast                 | impl/verilog/report/mmul_failfast_synth.rpt                 |
+| timing                   | impl/verilog/report/mmul_timing_synth.rpt                   |
+| timing_paths             | impl/verilog/report/mmul_timing_paths_synth.rpt             |
+| utilization              | impl/verilog/report/mmul_utilization_synth.rpt              |
+| utilization_hierarchical | impl/verilog/report/mmul_utilization_hierarchical_synth.rpt |
++--------------------------+-------------------------------------------------------------+
+
+

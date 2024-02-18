@@ -1,0 +1,156 @@
+
+
+================================================================
+== Synthesis Summary Report of 'mmul'
+================================================================
++ General Information: 
+    * Date:           Fri Feb 17 16:44:43 2023
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        mmul
+    * Solution:       solution3 (Vivado IP Flow Target)
+    * Product family: kintex7
+    * Target device:  xc7k160t-fbg676-2
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-----------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |     Modules     | Issue|      | Latency | Latency | Iteration|         | Trip |          |      |         |           |           |     |
+    |     & Loops     | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined| BRAM |   DSP   |     FF    |    LUT    | URAM|
+    +-----------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+    |+ mmul           |     -|  0.13|       81|  324.000|         -|       82|     -|        no|     -|  1 (~0%)|  323 (~0%)|  407 (~0%)|    -|
+    | o row_col_prod  |     -|  2.92|       79|  316.000|         9|        1|    72|       yes|     -|        -|          -|          -|    -|
+    +-----------------+------+------+---------+---------+----------+---------+------+----------+------+---------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* AP_MEMORY
++--------------+----------+
+| Interface    | Bitwidth |
++--------------+----------+
+| a_0_address0 | 2        |
+| a_0_q0       | 16       |
+| a_1_address0 | 2        |
+| a_1_q0       | 16       |
+| a_2_address0 | 2        |
+| a_2_q0       | 16       |
+| a_3_address0 | 2        |
+| a_3_address1 | 2        |
+| a_3_d0       | 16       |
+| a_3_d1       | 16       |
+| a_3_q0       | 16       |
+| a_3_q1       | 16       |
+| b_0_address0 | 3        |
+| b_0_q0       | 16       |
+| b_1_address0 | 3        |
+| b_1_q0       | 16       |
+| b_2_address0 | 3        |
+| b_2_q0       | 16       |
+| b_3_address0 | 3        |
+| b_3_q0       | 16       |
+| c_address0   | 5        |
+| c_d0         | 16       |
++--------------+----------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------------------------------+
+| Interface | Type       | Ports                             |
++-----------+------------+-----------------------------------+
+| ap_clk    | clock      | ap_clk                            |
+| ap_rst    | reset      | ap_rst                            |
+| ap_ctrl   | ap_ctrl_hs | ap_done ap_idle ap_ready ap_start |
++-----------+------------+-----------------------------------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++----------+-----------+---------------------------------------+
+| Argument | Direction | Datatype                              |
++----------+-----------+---------------------------------------+
+| a        | in        | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
+| b        | in        | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
+| c        | out       | ap_fixed<16, 16, AP_TRN, AP_WRAP, 0>* |
++----------+-----------+---------------------------------------+
+
+* SW-to-HW Mapping
++----------+--------------+---------+----------+
+| Argument | HW Interface | HW Type | HW Usage |
++----------+--------------+---------+----------+
+| a        | a_0_address0 | port    | offset   |
+| a        | a_0_ce0      | port    |          |
+| a        | a_0_q0       | port    |          |
+| a        | a_1_address0 | port    | offset   |
+| a        | a_1_ce0      | port    |          |
+| a        | a_1_q0       | port    |          |
+| a        | a_2_address0 | port    | offset   |
+| a        | a_2_ce0      | port    |          |
+| a        | a_2_q0       | port    |          |
+| a        | a_3_address0 | port    | offset   |
+| a        | a_3_ce0      | port    |          |
+| a        | a_3_we0      | port    |          |
+| a        | a_3_d0       | port    |          |
+| a        | a_3_q0       | port    |          |
+| a        | a_3_address1 | port    | offset   |
+| a        | a_3_ce1      | port    |          |
+| a        | a_3_we1      | port    |          |
+| a        | a_3_d1       | port    |          |
+| a        | a_3_q1       | port    |          |
+| b        | b_0_address0 | port    | offset   |
+| b        | b_0_ce0      | port    |          |
+| b        | b_0_q0       | port    |          |
+| b        | b_1_address0 | port    | offset   |
+| b        | b_1_ce0      | port    |          |
+| b        | b_1_q0       | port    |          |
+| b        | b_2_address0 | port    | offset   |
+| b        | b_2_ce0      | port    |          |
+| b        | b_2_q0       | port    |          |
+| b        | b_3_address0 | port    | offset   |
+| b        | b_3_ce0      | port    |          |
+| b        | b_3_q0       | port    |          |
+| c        | c_address0   | port    | offset   |
+| c        | c_ce0        | port    |          |
+| c        | c_we0        | port    |          |
+| c        | c_d0         | port    |          |
++----------+--------------+---------+----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------+-----+--------+------------+-----+--------+---------+
+| Name                                | DSP | Pragma | Variable   | Op  | Impl   | Latency |
++-------------------------------------+-----+--------+------------+-----+--------+---------+
+| + mmul                              | 1   |        |            |     |        |         |
+|   add_ln8_1_fu_256_p2               | -   |        | add_ln8_1  | add | fabric | 0       |
+|   add_ln8_fu_307_p2                 | -   |        | add_ln8    | add | fabric | 0       |
+|   add_ln10_fu_344_p2                | -   |        | add_ln10   | add | fabric | 0       |
+|   mac_muladd_16s_16s_16ns_16_4_1_U3 | 1   |        | mul_ln859  | mul | dsp48  | 3       |
+|   mac_muladd_16s_16s_16ns_16_4_1_U3 | 1   |        | acc_V      | add | dsp48  | 3       |
+|   add_ln12_fu_383_p2                | -   |        | add_ln12   | add | fabric | 0       |
+|   add_ln10_1_fu_274_p2              | -   |        | add_ln10_1 | add | fabric | 0       |
++-------------------------------------+-----+--------+------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+---------------------------------+--------------------------------------------+
+| Type            | Options                         | Location                                   |
++-----------------+---------------------------------+--------------------------------------------+
+| array_partition | variable=a block factor=4 dim=1 | mmul/solution3/directives.tcl:8 in mmul, a |
+| array_partition | variable=b block factor=4 dim=1 | mmul/solution3/directives.tcl:9 in mmul, b |
+| pipeline        |                                 | mmul/solution3/directives.tcl:7 in mmul    |
++-----------------+---------------------------------+--------------------------------------------+
+
+

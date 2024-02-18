@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Feb 13 17:36:17 2023
+# Process ID: 6528
+# Current directory: Z:/ECC/Desktop/Winter2023/ELEN226/Assignment2/InnerProduct/solution1/sim/verilog
+# Command line: vivado.exe -source open_wave.tcl
+# Log file: Z:/ECC/Desktop/Winter2023/ELEN226/Assignment2/InnerProduct/solution1/sim/verilog/vivado.log
+# Journal file: Z:/ECC/Desktop/Winter2023/ELEN226/Assignment2/InnerProduct/solution1/sim/verilog\vivado.jou
+# Running On: winvdi1007, OS: Windows, CPU Frequency: 2394 MHz, CPU Physical cores: 4, Host memory: 8588 MB
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+open_wave_config Z:/ECC/Desktop/Winter2023/ELEN226/Assignment2/InnerProduct/solution1/sim/verilog/inner_product.wcfg

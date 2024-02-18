@@ -1,0 +1,260 @@
+
+
+================================================================
+== Vitis HLS Report for 'inner_product'
+================================================================
+* Date:           Fri Feb 24 12:56:34 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        InnerProduct
+* Solution:       solution3 (Vivado IP Flow Target)
+* Product family: kintex7
+* Target device:  xc7k160t-fbg676-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.047 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |        7|        7|  28.000 ns|  28.000 ns|    1|    1|      yes|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 1
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 8
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 8
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 8, States = { 1 2 3 4 5 6 7 8 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.54>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%a_0_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_0"   --->   Operation 9 'read' 'a_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%b_0_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_0"   --->   Operation 10 'read' 'b_0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%a_1_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_1"   --->   Operation 11 'read' 'a_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%b_1_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_1"   --->   Operation 12 'read' 'b_1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [4/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859 = mul i16 %b_1_read, i16 %a_1_read"   --->   Operation 13 'mul' 'mul_ln859' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%a_2_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_2"   --->   Operation 14 'read' 'a_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%b_2_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_2"   --->   Operation 15 'read' 'b_2_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [4/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_1 = mul i16 %b_2_read, i16 %a_2_read"   --->   Operation 16 'mul' 'mul_ln859_1' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%a_3_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_3"   --->   Operation 17 'read' 'a_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%b_3_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_3"   --->   Operation 18 'read' 'b_3_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%a_4_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_4"   --->   Operation 19 'read' 'a_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%b_4_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_4"   --->   Operation 20 'read' 'b_4_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [4/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_3 = mul i16 %b_4_read, i16 %a_4_read"   --->   Operation 21 'mul' 'mul_ln859_3' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%a_5_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_5"   --->   Operation 22 'read' 'a_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%b_5_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_5"   --->   Operation 23 'read' 'b_5_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%a_6_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_6"   --->   Operation 24 'read' 'a_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%b_6_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_6"   --->   Operation 25 'read' 'b_6_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [4/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_5 = mul i16 %b_6_read, i16 %a_6_read"   --->   Operation 26 'mul' 'mul_ln859_5' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%a_7_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %a_7"   --->   Operation 27 'read' 'a_7_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%b_7_read = read i16 @_ssdm_op_Read.ap_auto.i16P0A, i16 %b_7"   --->   Operation 28 'read' 'b_7_read' <Predicate = true> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 1.54>
+ST_2 : Operation 29 [3/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859 = mul i16 %b_1_read, i16 %a_1_read"   --->   Operation 29 'mul' 'mul_ln859' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 30 [3/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_1 = mul i16 %b_2_read, i16 %a_2_read"   --->   Operation 30 'mul' 'mul_ln859_1' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 31 [3/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_3 = mul i16 %b_4_read, i16 %a_4_read"   --->   Operation 31 'mul' 'mul_ln859_3' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_2 : Operation 32 [3/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_5 = mul i16 %b_6_read, i16 %a_6_read"   --->   Operation 32 'mul' 'mul_ln859_5' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 3 <SV = 2> <Delay = 1.54>
+ST_3 : Operation 33 [3/3] (1.02ns) (grouped into DSP with root node add_ln859)   --->   "%acc_V = mul i16 %b_0_read, i16 %a_0_read"   --->   Operation 33 'mul' 'acc_V' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 34 [2/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859 = mul i16 %b_1_read, i16 %a_1_read"   --->   Operation 34 'mul' 'mul_ln859' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 35 [2/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_1 = mul i16 %b_2_read, i16 %a_2_read"   --->   Operation 35 'mul' 'mul_ln859_1' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 36 [3/3] (1.02ns) (grouped into DSP with root node add_ln859_1)   --->   "%mul_ln859_2 = mul i16 %b_3_read, i16 %a_3_read"   --->   Operation 36 'mul' 'mul_ln859_2' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 37 [2/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_3 = mul i16 %b_4_read, i16 %a_4_read"   --->   Operation 37 'mul' 'mul_ln859_3' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 38 [3/3] (1.02ns) (grouped into DSP with root node add_ln859_3)   --->   "%mul_ln859_4 = mul i16 %b_5_read, i16 %a_5_read"   --->   Operation 38 'mul' 'mul_ln859_4' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 39 [2/4] (1.54ns) (root node of the DSP)   --->   "%mul_ln859_5 = mul i16 %b_6_read, i16 %a_6_read"   --->   Operation 39 'mul' 'mul_ln859_5' <Predicate = true> <Delay = 1.54> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 40 [3/3] (1.02ns) (grouped into DSP with root node add_ln859_4)   --->   "%mul_ln859_6 = mul i16 %b_7_read, i16 %a_7_read"   --->   Operation 40 'mul' 'mul_ln859_6' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 4 <SV = 3> <Delay = 1.02>
+ST_4 : Operation 41 [2/3] (1.02ns) (grouped into DSP with root node add_ln859)   --->   "%acc_V = mul i16 %b_0_read, i16 %a_0_read"   --->   Operation 41 'mul' 'acc_V' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 42 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln859 = mul i16 %b_1_read, i16 %a_1_read"   --->   Operation 42 'mul' 'mul_ln859' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 43 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln859_1 = mul i16 %b_2_read, i16 %a_2_read"   --->   Operation 43 'mul' 'mul_ln859_1' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 44 [2/3] (1.02ns) (grouped into DSP with root node add_ln859_1)   --->   "%mul_ln859_2 = mul i16 %b_3_read, i16 %a_3_read"   --->   Operation 44 'mul' 'mul_ln859_2' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 45 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln859_3 = mul i16 %b_4_read, i16 %a_4_read"   --->   Operation 45 'mul' 'mul_ln859_3' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 46 [2/3] (1.02ns) (grouped into DSP with root node add_ln859_3)   --->   "%mul_ln859_4 = mul i16 %b_5_read, i16 %a_5_read"   --->   Operation 46 'mul' 'mul_ln859_4' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 47 [1/4] (0.00ns) (root node of the DSP)   --->   "%mul_ln859_5 = mul i16 %b_6_read, i16 %a_6_read"   --->   Operation 47 'mul' 'mul_ln859_5' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_4 : Operation 48 [2/3] (1.02ns) (grouped into DSP with root node add_ln859_4)   --->   "%mul_ln859_6 = mul i16 %b_7_read, i16 %a_7_read"   --->   Operation 48 'mul' 'mul_ln859_6' <Predicate = true> <Delay = 1.02> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 5 <SV = 4> <Delay = 1.49>
+ST_5 : Operation 49 [1/3] (0.00ns) (grouped into DSP with root node add_ln859)   --->   "%acc_V = mul i16 %b_0_read, i16 %a_0_read"   --->   Operation 49 'mul' 'acc_V' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 50 [1/3] (0.00ns) (grouped into DSP with root node add_ln859_1)   --->   "%mul_ln859_2 = mul i16 %b_3_read, i16 %a_3_read"   --->   Operation 50 'mul' 'mul_ln859_2' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 51 [1/3] (0.00ns) (grouped into DSP with root node add_ln859_3)   --->   "%mul_ln859_4 = mul i16 %b_5_read, i16 %a_5_read"   --->   Operation 51 'mul' 'mul_ln859_4' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 52 [1/3] (0.00ns) (grouped into DSP with root node add_ln859_4)   --->   "%mul_ln859_6 = mul i16 %b_7_read, i16 %a_7_read"   --->   Operation 52 'mul' 'mul_ln859_6' <Predicate = true> <Delay = 0.00> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 53 [2/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859 = add i16 %mul_ln859, i16 %acc_V"   --->   Operation 53 'add' 'add_ln859' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 54 [2/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859_1 = add i16 %mul_ln859_1, i16 %mul_ln859_2"   --->   Operation 54 'add' 'add_ln859_1' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 55 [2/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859_3 = add i16 %mul_ln859_3, i16 %mul_ln859_4"   --->   Operation 55 'add' 'add_ln859_3' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_5 : Operation 56 [2/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859_4 = add i16 %mul_ln859_5, i16 %mul_ln859_6"   --->   Operation 56 'add' 'add_ln859_4' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 6 <SV = 5> <Delay = 1.49>
+ST_6 : Operation 57 [1/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859 = add i16 %mul_ln859, i16 %acc_V"   --->   Operation 57 'add' 'add_ln859' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 58 [1/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859_1 = add i16 %mul_ln859_1, i16 %mul_ln859_2"   --->   Operation 58 'add' 'add_ln859_1' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 59 [1/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859_3 = add i16 %mul_ln859_3, i16 %mul_ln859_4"   --->   Operation 59 'add' 'add_ln859_3' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+ST_6 : Operation 60 [1/2] (1.49ns) (root node of the DSP)   --->   "%add_ln859_4 = add i16 %mul_ln859_5, i16 %mul_ln859_6"   --->   Operation 60 'add' 'add_ln859_4' <Predicate = true> <Delay = 1.49> <CoreInst = "DSP48">   --->   Core 119 'DSP48' <Latency = 3> <II = 1> <Delay = 1.54> <IPBlock> <Opcode : 'mul' 'add' 'sub' 'select'> <InPorts = 0> <OutPorts = 1> <Sync> <CReg>
+
+State 7 <SV = 6> <Delay = 1.34>
+ST_7 : Operation 61 [1/1] (1.34ns)   --->   "%add_ln859_5 = add i16 %add_ln859_4, i16 %add_ln859_3"   --->   Operation 61 'add' 'add_ln859_5' <Predicate = true> <Delay = 1.34> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.34> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 2.04>
+ST_8 : Operation 62 [1/1] (0.00ns)   --->   "%specpipeline_ln8 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [Z:/ECC/Desktop/Winter2023/ELEN226/Assignment2/InnerProduct/solution3/directives.tcl:8]   --->   Operation 62 'specpipeline' 'specpipeline_ln8' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 63 [1/1] (0.00ns)   --->   "%spectopmodule_ln3 = spectopmodule void @_ssdm_op_SpecTopModule, void @empty_1" [inner_product.cpp:3]   --->   Operation 63 'spectopmodule' 'spectopmodule_ln3' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 64 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_0"   --->   Operation 64 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 65 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 65 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 66 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_1"   --->   Operation 66 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 67 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 67 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 68 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_2"   --->   Operation 68 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 69 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 69 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 70 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_3"   --->   Operation 70 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_3, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 71 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_4"   --->   Operation 72 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 73 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_4, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 73 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 74 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_5"   --->   Operation 74 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 75 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_5, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 75 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 76 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_6"   --->   Operation 76 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 77 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_6, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 77 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 78 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %a_7"   --->   Operation 78 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 79 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %a_7, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 79 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 80 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_0"   --->   Operation 80 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 81 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_0, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 81 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 82 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_1"   --->   Operation 82 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 83 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_1, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 83 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 84 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_2"   --->   Operation 84 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 85 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_2, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 85 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 86 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_3"   --->   Operation 86 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_3, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 87 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_4"   --->   Operation 88 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_4, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 89 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_5"   --->   Operation 90 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 91 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_5, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 91 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 92 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_6"   --->   Operation 92 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 93 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_6, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 93 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %b_7"   --->   Operation 94 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 95 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %b_7, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 95 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %s"   --->   Operation 96 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 97 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %s, void @empty, i32 0, i32 0, void @empty_0, i32 0, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 97 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 98 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln859_2 = add i16 %add_ln859_1, i16 %add_ln859"   --->   Operation 98 'add' 'add_ln859_2' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 99 [1/1] (2.04ns) (root node of TernaryAdder)   --->   "%acc_V_1 = add i16 %add_ln859_5, i16 %add_ln859_2"   --->   Operation 99 'add' 'acc_V_1' <Predicate = true> <Delay = 2.04> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.02> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_8 : Operation 100 [1/1] (0.00ns)   --->   "%write_ln14 = write void @_ssdm_op_Write.ap_auto.i16P0A, i16 %s, i16 %acc_V_1" [inner_product.cpp:14]   --->   Operation 100 'write' 'write_ln14' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 101 [1/1] (0.00ns)   --->   "%ret_ln15 = ret" [inner_product.cpp:15]   --->   Operation 101 'ret' 'ret_ln15' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 1.54ns
+The critical path consists of the following:
+	wire read operation ('a_1_read') on port 'a_1' [57]  (0 ns)
+	'mul' operation of DSP[59] ('mul_ln859') [59]  (1.54 ns)
+
+ <State 2>: 1.54ns
+The critical path consists of the following:
+	'mul' operation of DSP[59] ('mul_ln859') [59]  (1.54 ns)
+
+ <State 3>: 1.54ns
+The critical path consists of the following:
+	'mul' operation of DSP[59] ('mul_ln859') [59]  (1.54 ns)
+
+ <State 4>: 1.02ns
+The critical path consists of the following:
+	'mul' operation of DSP[78] ('acc.V') [56]  (1.02 ns)
+
+ <State 5>: 1.49ns
+The critical path consists of the following:
+	'mul' operation of DSP[78] ('acc.V') [56]  (0 ns)
+	'add' operation of DSP[78] ('add_ln859') [78]  (1.49 ns)
+
+ <State 6>: 1.49ns
+The critical path consists of the following:
+	'add' operation of DSP[78] ('add_ln859') [78]  (1.49 ns)
+
+ <State 7>: 1.35ns
+The critical path consists of the following:
+	'add' operation ('add_ln859_5') [83]  (1.35 ns)
+
+ <State 8>: 2.05ns
+The critical path consists of the following:
+	'add' operation ('add_ln859_2') [80]  (0 ns)
+	'add' operation ('acc.V') [84]  (2.05 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

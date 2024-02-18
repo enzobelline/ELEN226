@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1677272198954">
+  <ports id="1" name="a_0" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="a_1" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="a_2" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="4" name="a_3" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="5" name="a_4" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="6" name="a_5" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="7" name="a_6" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="8" name="a_7" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="9" name="b_0" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="10" name="b_1" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="11" name="b_2" type="PortType" coreId="1279811443" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="12" name="b_3" type="PortType" coreId="1953067621" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="13" name="b_4" type="PortType" coreId="1852795252" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="14" name="b_5" type="PortType" coreId="539122993" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="15" name="b_6" type="PortType" coreId="1768976244" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="16" name="b_7" type="PortType" coreId="1601265520" bitwidth="16">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="17" name="s" type="PortType" coreId="1685024095" bitwidth="16" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="90" source_obj="//@ports.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.0"/>
+  <edges id="92" source_obj="//@ports.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.1"/>
+  <edges id="93" source_obj="//@regions.0/@basic_blocks.0/@node_objs.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="94" source_obj="//@regions.0/@basic_blocks.0/@node_objs.0" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.2"/>
+  <edges id="96" source_obj="//@ports.1" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.3"/>
+  <edges id="98" source_obj="//@ports.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.4"/>
+  <edges id="99" source_obj="//@regions.0/@basic_blocks.0/@node_objs.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="100" source_obj="//@regions.0/@basic_blocks.0/@node_objs.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.5"/>
+  <edges id="102" source_obj="//@ports.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.6"/>
+  <edges id="104" source_obj="//@ports.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.7"/>
+  <edges id="105" source_obj="//@regions.0/@basic_blocks.0/@node_objs.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="106" source_obj="//@regions.0/@basic_blocks.0/@node_objs.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.8"/>
+  <edges id="108" source_obj="//@ports.3" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.9"/>
+  <edges id="110" source_obj="//@ports.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.10"/>
+  <edges id="111" source_obj="//@regions.0/@basic_blocks.0/@node_objs.10" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="112" source_obj="//@regions.0/@basic_blocks.0/@node_objs.9" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.11"/>
+  <edges id="114" source_obj="//@ports.4" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.12"/>
+  <edges id="116" source_obj="//@ports.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.13"/>
+  <edges id="117" source_obj="//@regions.0/@basic_blocks.0/@node_objs.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="118" source_obj="//@regions.0/@basic_blocks.0/@node_objs.12" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.14"/>
+  <edges id="120" source_obj="//@ports.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.15"/>
+  <edges id="122" source_obj="//@ports.13" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.16"/>
+  <edges id="123" source_obj="//@regions.0/@basic_blocks.0/@node_objs.16" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="124" source_obj="//@regions.0/@basic_blocks.0/@node_objs.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.17"/>
+  <edges id="126" source_obj="//@ports.6" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.18"/>
+  <edges id="128" source_obj="//@ports.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.19"/>
+  <edges id="129" source_obj="//@regions.0/@basic_blocks.0/@node_objs.19" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="130" source_obj="//@regions.0/@basic_blocks.0/@node_objs.18" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.20"/>
+  <edges id="132" source_obj="//@ports.7" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.21"/>
+  <edges id="134" source_obj="//@ports.15" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.22"/>
+  <edges id="135" source_obj="//@regions.0/@basic_blocks.0/@node_objs.22" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="136" source_obj="//@regions.0/@basic_blocks.0/@node_objs.21" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.23"/>
+  <edges id="137" source_obj="//@regions.0/@basic_blocks.0/@node_objs.5" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="138" source_obj="//@regions.0/@basic_blocks.0/@node_objs.2" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.24"/>
+  <edges id="139" source_obj="//@regions.0/@basic_blocks.0/@node_objs.8" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="140" source_obj="//@regions.0/@basic_blocks.0/@node_objs.11" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.25"/>
+  <edges id="141" source_obj="//@regions.0/@basic_blocks.0/@node_objs.25" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="142" source_obj="//@regions.0/@basic_blocks.0/@node_objs.24" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.26"/>
+  <edges id="143" source_obj="//@regions.0/@basic_blocks.0/@node_objs.14" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="144" source_obj="//@regions.0/@basic_blocks.0/@node_objs.17" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.27"/>
+  <edges id="145" source_obj="//@regions.0/@basic_blocks.0/@node_objs.20" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="146" source_obj="//@regions.0/@basic_blocks.0/@node_objs.23" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.28"/>
+  <edges id="147" source_obj="//@regions.0/@basic_blocks.0/@node_objs.28" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="148" source_obj="//@regions.0/@basic_blocks.0/@node_objs.27" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.29"/>
+  <edges id="149" source_obj="//@regions.0/@basic_blocks.0/@node_objs.29" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="150" source_obj="//@regions.0/@basic_blocks.0/@node_objs.26" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.30"/>
+  <edges id="153" source_obj="//@regions.0/@basic_blocks.0/@node_objs.31" sink_obj="//@ports.16"/>
+  <edges id="154" source_obj="//@regions.0/@basic_blocks.0/@node_objs.30" sink_obj="//@regions.0/@basic_blocks.0/@node_objs.31"/>
+  <regions anchor_node="-1" region_type="8" interval="1" typeName="Pipeline" iiViolation="" id="211" pipe_depth="8" RegionName="inner_product">
+    <basic_blocks id="87" name="inner_product" type="BlockType">
+      <node_objs xsi:type="cdfg:CdfgNode" id="54" name="a_0_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741749052" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="55" name="b_0_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741749052" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_0</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="56" name="acc_V" lineNumber="859" originalName="acc.V" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U5" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLabel="2.0" nodeLatency="2" m_display="0" m_delay="1.02" m_topoIndex="21" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="57" name="a_1_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741749052" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="58" name="b_1_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741749052" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_1</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="59" name="mul_ln859" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U1" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLatency="3" m_display="0" m_delay="1.54" m_topoIndex="5" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="60" name="a_2_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="6" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_2</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="61" name="b_2_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741749052" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="7" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_2</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="62" name="mul_ln859_1" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U2" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLatency="3" m_display="0" m_delay="1.54" m_topoIndex="8" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="63" name="a_3_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="9" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_3</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="64" name="b_3_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="10" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_3</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="65" name="mul_ln859_2" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U6" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLabel="2.0" nodeLatency="2" m_display="0" m_delay="1.02" m_topoIndex="22" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="66" name="a_4_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_4</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="67" name="b_4_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741749052" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_4</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="68" name="mul_ln859_3" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U3" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLatency="3" m_display="0" m_delay="1.54" m_topoIndex="13" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="69" name="a_5_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_5</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="70" name="b_5_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_5</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="71" name="mul_ln859_4" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U7" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLabel="2.0" nodeLatency="2" m_display="0" m_delay="1.02" m_topoIndex="23" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="72" name="a_6_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_6</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="73" name="b_6_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741749052" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_6</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="74" name="mul_ln859_5" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mul_mul_16s_16s_16_4_1_U4" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLatency="3" m_display="0" m_delay="1.54" m_topoIndex="18" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="75" name="a_7_read" lineNumber="1317" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1317" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>a_7</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="76" name="b_7_read" lineNumber="1319" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." coreId="741487420" contextFuncName="operator_mul_16_16_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="read" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1319" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator*&amp;lt;16, 16, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>b_7</dataInputObjs>
+        <dataOutputObjs>mul</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="77" name="mul_ln859_6" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U8" coreName="DSP48" implIndex="dsp48" control="no" opType="mul" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="mul" nodeLabel="2.0" nodeLatency="2" m_display="0" m_delay="1.02" m_topoIndex="24" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>read</dataInputObjs>
+        <dataInputObjs>read</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="78" name="add_ln859" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U5" coreName="DSP48" implIndex="dsp48" control="no" opType="add" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="add" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.49" m_topoIndex="25" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="79" name="add_ln859_1" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U6" coreName="DSP48" implIndex="dsp48" control="no" opType="add" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="add" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.49" m_topoIndex="26" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="80" name="add_ln859_2" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="add_ln859_2_fu_163_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="add" nodeLabel="7.0" m_display="0" m_topoIndex="30" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="81" name="add_ln859_3" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U7" coreName="DSP48" implIndex="dsp48" control="no" opType="add" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="add" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.49" m_topoIndex="27" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="82" name="add_ln859_4" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="mac_muladd_16s_16s_16ns_16_4_1_U8" coreName="DSP48" implIndex="dsp48" control="no" opType="add" coreId="119" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="add" nodeLabel="4.0" nodeLatency="1" m_display="0" m_delay="1.49" m_topoIndex="28" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataInputObjs>mul</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="83" name="add_ln859_5" lineNumber="859" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="add_ln859_5_fu_159_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="add" nodeLabel="6.0" m_display="0" m_delay="1.34" m_topoIndex="29" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>add</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="84" name="acc_V_1" lineNumber="859" originalName="acc.V" fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="s" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_assign_33_33_true_AP_TRN_AP_WRAP_0" bitwidth="16" opcode="add" nodeLabel="7.0" m_display="0" m_delay="2.04" m_topoIndex="31" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2" functionName="operator=&amp;lt;33, 33, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>write</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="85" name="s_write_ln14" lineNumber="14" fileName="inner_product.cpp" fileDirectory=".." coreId="741487420" opcode="write" nodeLabel="7.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="inner_product.cpp" linenumber="14" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2"/>
+        <dataInputObjs>add</dataInputObjs>
+        <dataOutputObjs>s</dataOutputObjs>
+      </node_objs>
+      <node_objs xsi:type="cdfg:CdfgNode" id="86" name="_ln15" lineNumber="15" fileName="inner_product.cpp" fileDirectory=".." coreId="741487420" opcode="ret" nodeLabel="7.0" m_display="0" m_topoIndex="33" m_clusterGroupNumber="-1">
+        <inlineStackInfo fileName="inner_product.cpp" linenumber="15" fileDirectory="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2"/>
+      </node_objs>
+      <fileValidLineNumbers fileName="inner_product.cpp">
+        <validLinenumbers>14</validLinenumbers>
+        <validLinenumbers>15</validLinenumbers>
+      </fileValidLineNumbers>
+      <fileValidLineNumbers fileName="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h">
+        <validLinenumbers>1317</validLinenumbers>
+        <validLinenumbers>1319</validLinenumbers>
+        <validLinenumbers>859</validLinenumbers>
+      </fileValidLineNumbers>
+    </basic_blocks>
+  </regions>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <ScheduleInfo time="4"/>
+  <ScheduleInfo time="5"/>
+  <ScheduleInfo time="6"/>
+  <ScheduleInfo time="7"/>
+  <regnodes realName="a_6_read_reg_277">
+    <nodeIds>72</nodeIds>
+  </regnodes>
+  <regnodes realName="a_0_read_reg_217">
+    <nodeIds>54</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln859_1_reg_302">
+    <nodeIds>62</nodeIds>
+  </regnodes>
+  <regnodes realName="a_2_read_reg_237">
+    <nodeIds>60</nodeIds>
+  </regnodes>
+  <regnodes realName="a_4_read_reg_257">
+    <nodeIds>66</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln859_3_reg_307">
+    <nodeIds>68</nodeIds>
+  </regnodes>
+  <regnodes realName="b_7_read_reg_292">
+    <nodeIds>76</nodeIds>
+  </regnodes>
+  <regnodes realName="b_1_read_reg_232">
+    <nodeIds>58</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln859_5_reg_312">
+    <nodeIds>74</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln859_1_reg_322">
+    <nodeIds>79</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln859_3_reg_327">
+    <nodeIds>81</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln859_reg_317">
+    <nodeIds>78</nodeIds>
+  </regnodes>
+  <regnodes realName="b_4_read_reg_262">
+    <nodeIds>67</nodeIds>
+  </regnodes>
+  <regnodes realName="a_5_read_reg_267">
+    <nodeIds>69</nodeIds>
+  </regnodes>
+  <regnodes realName="a_7_read_reg_287">
+    <nodeIds>75</nodeIds>
+  </regnodes>
+  <regnodes realName="b_2_read_reg_242">
+    <nodeIds>61</nodeIds>
+  </regnodes>
+  <regnodes realName="a_3_read_reg_247">
+    <nodeIds>63</nodeIds>
+  </regnodes>
+  <regnodes realName="b_6_read_reg_282">
+    <nodeIds>73</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln859_5_reg_337">
+    <nodeIds>83</nodeIds>
+  </regnodes>
+  <regnodes realName="b_0_read_reg_222">
+    <nodeIds>55</nodeIds>
+  </regnodes>
+  <regnodes realName="mul_ln859_reg_297">
+    <nodeIds>59</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln859_4_reg_332">
+    <nodeIds>82</nodeIds>
+  </regnodes>
+  <regnodes realName="b_5_read_reg_272">
+    <nodeIds>70</nodeIds>
+  </regnodes>
+  <regnodes realName="b_3_read_reg_252">
+    <nodeIds>64</nodeIds>
+  </regnodes>
+  <regnodes realName="a_1_read_reg_227">
+    <nodeIds>57</nodeIds>
+  </regnodes>
+  <expressionNodes realName="add_ln859_5_fu_159">
+    <nodeIds>83</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="acc_V_1_fu_167">
+    <nodeIds>84</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln859_2_fu_163">
+    <nodeIds>80</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_fu_173">
+    <nodeIds>59</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_191">
+    <nodeIds>74</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_207">
+    <nodeIds>71</nodeIds>
+    <nodeIds>81</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_179">
+    <nodeIds>62</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_212">
+    <nodeIds>77</nodeIds>
+    <nodeIds>82</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_202">
+    <nodeIds>65</nodeIds>
+    <nodeIds>79</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_185">
+    <nodeIds>68</nodeIds>
+  </moduleNodes>
+  <moduleNodes realName="grp_fu_197">
+    <nodeIds>56</nodeIds>
+    <nodeIds>78</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="b_7_read_read_fu_146">
+    <nodeIds>76</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_7_read_read_fu_140">
+    <nodeIds>75</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_1_read_read_fu_74">
+    <nodeIds>58</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_2_read_read_fu_86">
+    <nodeIds>61</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_5_read_read_fu_116">
+    <nodeIds>69</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_5_read_read_fu_122">
+    <nodeIds>70</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_3_read_read_fu_92">
+    <nodeIds>63</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln14_write_fu_152">
+    <nodeIds>85</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_0_read_read_fu_56">
+    <nodeIds>54</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_2_read_read_fu_80">
+    <nodeIds>60</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_6_read_read_fu_128">
+    <nodeIds>72</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_0_read_read_fu_62">
+    <nodeIds>55</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_4_read_read_fu_110">
+    <nodeIds>67</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_1_read_read_fu_68">
+    <nodeIds>57</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_3_read_read_fu_98">
+    <nodeIds>64</nodeIds>
+  </ioNodes>
+  <ioNodes realName="a_4_read_read_fu_104">
+    <nodeIds>66</nodeIds>
+  </ioNodes>
+  <ioNodes realName="b_6_read_read_fu_134">
+    <nodeIds>73</nodeIds>
+  </ioNodes>
+  <ioPorts name="a_0">
+    <contents name="read">
+      <nodeIds>54</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_1">
+    <contents name="read">
+      <nodeIds>57</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_2">
+    <contents name="read">
+      <nodeIds>60</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_3">
+    <contents name="read">
+      <nodeIds>63</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_4">
+    <contents name="read">
+      <nodeIds>66</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_5">
+    <contents name="read">
+      <nodeIds>69</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_6">
+    <contents name="read">
+      <nodeIds>72</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="a_7">
+    <contents name="read">
+      <nodeIds>75</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_0">
+    <contents name="read">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_1">
+    <contents name="read">
+      <nodeIds>58</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_2">
+    <contents name="read">
+      <nodeIds>61</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_3">
+    <contents name="read">
+      <nodeIds>64</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_4">
+    <contents name="read">
+      <nodeIds>67</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_5">
+    <contents name="read">
+      <nodeIds>70</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_6">
+    <contents name="read">
+      <nodeIds>73</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="b_7">
+    <contents name="read">
+      <nodeIds>76</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="s">
+    <contents name="write">
+      <nodeIds>85</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+      <operations id="57" stage="1" latency="1"/>
+      <operations id="58" stage="1" latency="1"/>
+      <operations id="59" stage="4" latency="4"/>
+      <operations id="60" stage="1" latency="1"/>
+      <operations id="61" stage="1" latency="1"/>
+      <operations id="62" stage="4" latency="4"/>
+      <operations id="63" stage="1" latency="1"/>
+      <operations id="64" stage="1" latency="1"/>
+      <operations id="66" stage="1" latency="1"/>
+      <operations id="67" stage="1" latency="1"/>
+      <operations id="68" stage="4" latency="4"/>
+      <operations id="69" stage="1" latency="1"/>
+      <operations id="70" stage="1" latency="1"/>
+      <operations id="72" stage="1" latency="1"/>
+      <operations id="73" stage="1" latency="1"/>
+      <operations id="74" stage="4" latency="4"/>
+      <operations id="75" stage="1" latency="1"/>
+      <operations id="76" stage="1" latency="1"/>
+    </states>
+    <states id="2">
+      <operations id="59" stage="3" latency="4"/>
+      <operations id="62" stage="3" latency="4"/>
+      <operations id="68" stage="3" latency="4"/>
+      <operations id="74" stage="3" latency="4"/>
+    </states>
+    <states id="3">
+      <operations id="56" stage="3" latency="3"/>
+      <operations id="59" stage="2" latency="4"/>
+      <operations id="62" stage="2" latency="4"/>
+      <operations id="65" stage="3" latency="3"/>
+      <operations id="68" stage="2" latency="4"/>
+      <operations id="71" stage="3" latency="3"/>
+      <operations id="74" stage="2" latency="4"/>
+      <operations id="77" stage="3" latency="3"/>
+    </states>
+    <states id="4">
+      <operations id="56" stage="2" latency="3"/>
+      <operations id="59" stage="1" latency="4"/>
+      <operations id="62" stage="1" latency="4"/>
+      <operations id="65" stage="2" latency="3"/>
+      <operations id="68" stage="1" latency="4"/>
+      <operations id="71" stage="2" latency="3"/>
+      <operations id="74" stage="1" latency="4"/>
+      <operations id="77" stage="2" latency="3"/>
+    </states>
+    <states id="5">
+      <operations id="56" stage="1" latency="3"/>
+      <operations id="65" stage="1" latency="3"/>
+      <operations id="71" stage="1" latency="3"/>
+      <operations id="77" stage="1" latency="3"/>
+      <operations id="78" stage="2" latency="2"/>
+      <operations id="79" stage="2" latency="2"/>
+      <operations id="81" stage="2" latency="2"/>
+      <operations id="82" stage="2" latency="2"/>
+    </states>
+    <states id="6">
+      <operations id="78" stage="1" latency="2"/>
+      <operations id="79" stage="1" latency="2"/>
+      <operations id="81" stage="1" latency="2"/>
+      <operations id="82" stage="1" latency="2"/>
+    </states>
+    <states id="7">
+      <operations id="83" stage="1" latency="1"/>
+    </states>
+    <states id="8">
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="1" latency="1"/>
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="80" stage="1" latency="1"/>
+      <operations id="84" stage="1" latency="1"/>
+      <operations id="85" stage="1" latency="1"/>
+      <operations id="86" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="4" outState="5">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="5" outState="6">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="6" outState="7">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="7" outState="8">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="inner_product" mII="1" mDepth="8" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="7" mMaxLatency="7">
+      <basicBlocks>87</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

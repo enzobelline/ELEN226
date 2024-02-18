@@ -1,0 +1,38 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Fri Feb 17 16:51:10 2023
+| Host         : winvdi1008 running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 5 -file ./report/mmul_utilization_hierarchical_synth.rpt
+| Design       : bd_0_wrapper
+| Device       : xc7k160tfbg676-2
+| Speed File   : -2
+| Design State : Synthesized
+-------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------------------------------------+-------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+|                         Instance                        |                            Module                           | Total LUTs | Logic LUTs | LUTRAMs | SRLs | FFs | RAMB36 | RAMB18 | DSP Blocks |
++---------------------------------------------------------+-------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+| bd_0_wrapper                                            |                                                       (top) |         93 |         85 |       0 |    8 |  85 |      0 |      0 |          1 |
+|   bd_0_i                                                |                                                        bd_0 |         93 |         85 |       0 |    8 |  85 |      0 |      0 |          1 |
+|     hls_inst                                            |                                             bd_0_hls_inst_0 |         93 |         85 |       0 |    8 |  85 |      0 |      0 |          1 |
+|       (hls_inst)                                        |                                             bd_0_hls_inst_0 |          0 |          0 |       0 |    0 |   0 |      0 |      0 |          0 |
+|       inst                                              |                                        bd_0_hls_inst_0_mmul |         93 |         85 |       0 |    8 |  85 |      0 |      0 |          1 |
+|         (inst)                                          |                                        bd_0_hls_inst_0_mmul |         25 |         17 |       0 |    8 |  84 |      0 |      0 |          0 |
+|         flow_control_loop_pipe_U                        |                 bd_0_hls_inst_0_mmul_flow_control_loop_pipe |         20 |         20 |       0 |    0 |   1 |      0 |      0 |          0 |
+|         mac_muladd_16s_16s_16ns_16_4_1_U3               |         bd_0_hls_inst_0_mmul_mac_muladd_16s_16s_16ns_16_4_1 |         16 |         16 |       0 |    0 |   0 |      0 |      0 |          1 |
+|           mmul_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U | bd_0_hls_inst_0_mmul_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0 |         16 |         16 |       0 |    0 |   0 |      0 |      0 |          1 |
+|         mux_32_16_1_1_U1                                |                          bd_0_hls_inst_0_mmul_mux_32_16_1_1 |         16 |         16 |       0 |    0 |   0 |      0 |      0 |          0 |
+|         mux_43_16_1_1_U2                                |                          bd_0_hls_inst_0_mmul_mux_43_16_1_1 |         16 |         16 |       0 |    0 |   0 |      0 |      0 |          0 |
++---------------------------------------------------------+-------------------------------------------------------------+------------+------------+---------+------+-----+--------+--------+------------+
+
+

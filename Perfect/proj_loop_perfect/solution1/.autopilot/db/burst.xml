@@ -1,0 +1,6 @@
+<VitisHLS:BurstInfo>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonByteSizeMemoryAccessMissed" src_info="loop_perfect.cpp:29:26" msg_id="214-226" msg_severity="INFO" msg_body="Non byte size access is unsupported" resolution="214-226" ID="if.then9.store.9" VarName="B" ParentFunc="loop_perfect(ap_int&lt;5&gt;*, ap_int&lt;6&gt;*)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonByteSizeMemoryAccessMissed" src_info="loop_perfect.cpp:31:26" msg_id="214-226" msg_severity="INFO" msg_body="Non byte size access is unsupported" resolution="214-226" ID="if.else.store.1" VarName="B" ParentFunc="loop_perfect(ap_int&lt;5&gt;*, ap_int&lt;6&gt;*)"/>
+    <burst group="BURST_VERBOSE_MISSED" fe_name="NonByteSizeMemoryAccessMissed" src_info="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:232:18" msg_id="214-226" msg_severity="INFO" msg_body="Non byte size access is unsupported" resolution="214-226" ID="for.body3.load.9" VarName="A" ParentFunc="loop_perfect(ap_int&lt;5&gt;*, ap_int&lt;6&gt;*)"/>
+</VitisHLS:BurstInfo>
+

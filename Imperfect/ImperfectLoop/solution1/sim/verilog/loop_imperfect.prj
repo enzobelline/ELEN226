@@ -1,0 +1,13 @@
+sv work "glbl.v"
+sv xil_defaultlib "loop_imperfect.autotb.v"
+sv xil_defaultlib "AESL_automem_A.v"
+sv xil_defaultlib "AESL_automem_B.v"
+sv xil_defaultlib "loop_imperfect_loop_imperfect_Pipeline_LOOP_I.v"
+sv xil_defaultlib "loop_imperfect.v"
+sv xil_defaultlib "loop_imperfect_flow_control_loop_pipe_sequential_init.v"
+sv xil_defaultlib "loop_imperfect_mac_muladd_5s_4ns_10s_11_4_1.v"
+sv xil_defaultlib "loop_imperfect_mac_muladd_5s_4ns_11s_11_4_1.v"
+sv xil_defaultlib "loop_imperfect_mac_muladd_5s_5ns_5s_10_4_1.v"
+sv xil_defaultlib "loop_imperfect_mul_mul_12s_13ns_26_4_1.v"
+sv xil_defaultlib "dataflow_monitor.sv"
+

@@ -1,0 +1,34 @@
+<AutoPilot:ProjectResources xmlns:AutoPilot="com.autoesl.autopilot.ui.directiveView">
+    <sourceFile name="">
+        <directive functionName="mmul" label="" functionLabel="">
+            <pragma name="TOP">
+                <option name="name" value="mmul"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmul" label="prod" functionLabel="">
+            <pragma name="PIPELINE"/>
+        </directive>
+        <directive functionName="mmul" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="a"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="0"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmul" label="" functionLabel="">
+            <pragma name="ARRAY_PARTITION">
+                <option name="variable" positionalBoolean="4" value="b"/>
+                <option name="complete" value="" positionalBoolean="type"/>
+                <option name="dim" value="0"/>
+            </pragma>
+        </directive>
+        <directive functionName="mmul" label="" functionLabel="">
+            <pragma name="ALLOCATION">
+                <option name="operation" value="" positionalBoolean="type"/>
+                <option name="instances" positionalBoolean="4" value="mul"/>
+                <option name="limit" value="72"/>
+            </pragma>
+        </directive>
+    </sourceFile>
+</AutoPilot:ProjectResources>
+

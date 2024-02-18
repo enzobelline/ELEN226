@@ -1,0 +1,5 @@
+mmul_mux_32_16_1_1
+mmul_mux_43_16_1_1
+mmul_mac_muladd_16s_16s_16ns_16_4_1
+mmul_flow_control_loop_pipe
+mmul

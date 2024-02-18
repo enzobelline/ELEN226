@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="loop_perfect.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Perfect\loop_perfect.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="result.golden.dat" path="Z:\ECC\Desktop\Winter2023\ELEN226\Perfect\result.golden.dat"/>
+    <originFiles name="loop_perfect_test.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Perfect\loop_perfect_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

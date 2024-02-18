@@ -1,0 +1,6 @@
+   Build using "C:/Apps/Xilinx/Vitis_HLS/2022.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling loop_perfect_test.cpp_pre.cpp.tb.cpp
+   Compiling loop_perfect.cpp_pre.cpp.tb.cpp
+   Compiling apatb_loop_perfect.cpp
+   Compiling apatb_loop_perfect_ir.ll
+   Generating cosim.tv.exe

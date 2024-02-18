@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vitis HLS Report for 'loop_perfect_Pipeline_LOOP_I'
+================================================================
+* Date:           Tue Feb 14 08:35:04 2023
+
+* Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+* Project:        proj_loop_perfect
+* Solution:       solution5 (Vivado IP Flow Target)
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  1.726 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |       22|       22|  88.000 ns|  88.000 ns|   22|   22|       no|
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- LOOP_I  |       20|       20|         1|          1|          1|    20|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.72>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%phi_mul = alloca i32 1"   --->   Operation 4 'alloca' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%i = alloca i32 1"   --->   Operation 5 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %B_1, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 6 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i6 %B_0, void @empty, i32 0, i32 0, void @empty_0, i32 4294967295, i32 0, void @empty_0, void @empty_0, void @empty_0, i32 0, i32 0, i32 0, i32 0, void @empty_0, void @empty_0, i32 4294967295, i32 0"   --->   Operation 7 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%tmp = read i6 @_ssdm_op_Read.ap_auto.i6, i6 %empty"   --->   Operation 8 'read' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.38ns)   --->   "%store_ln0 = store i5 0, i5 %i"   --->   Operation 9 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 10 [1/1] (0.38ns)   --->   "%store_ln0 = store i11 0, i11 %phi_mul"   --->   Operation 10 'store' 'store_ln0' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.body3"   --->   Operation 11 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%i_1 = load i5 %i"   --->   Operation 12 'load' 'i_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln23 = trunc i5 %i_1" [loop_perfect.cpp:23]   --->   Operation 13 'trunc' 'trunc_ln23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.63ns)   --->   "%icmp_ln23 = icmp_eq  i5 %i_1, i5 20" [loop_perfect.cpp:23]   --->   Operation 14 'icmp' 'icmp_ln23' <Predicate = true> <Delay = 0.63> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.63> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%empty_10 = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 20, i64 20, i64 20"   --->   Operation 15 'speclooptripcount' 'empty_10' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.70ns)   --->   "%add_ln23 = add i5 %i_1, i5 1" [loop_perfect.cpp:23]   --->   Operation 16 'add' 'add_ln23' <Predicate = true> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%br_ln23 = br i1 %icmp_ln23, void %for.body3.split, void %for.end21.exitStub" [loop_perfect.cpp:23]   --->   Operation 17 'br' 'br_ln23' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%phi_mul_load = load i11 %phi_mul" [loop_perfect.cpp:31]   --->   Operation 18 'load' 'phi_mul_load' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln10 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 0, i32 0, void @empty_0" [Z:/ECC/Desktop/Winter2023/ELEN226/Perfect/proj_loop_perfect/solution5/directives.tcl:10]   --->   Operation 19 'specpipeline' 'specpipeline_ln10' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%specloopname_ln20 = specloopname void @_ssdm_op_SpecLoopName, void @empty_2" [loop_perfect.cpp:20]   --->   Operation 20 'specloopname' 'specloopname_ln20' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%empty_11 = trunc i5 %i_1"   --->   Operation 21 'trunc' 'empty_11' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.73ns)   --->   "%next_mul = add i11 %phi_mul_load, i11 52" [loop_perfect.cpp:31]   --->   Operation 22 'add' 'next_mul' <Predicate = (!icmp_ln23)> <Delay = 0.73> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 23 [1/1] (0.63ns)   --->   "%empty_12 = icmp_ult  i5 %i_1, i5 10"   --->   Operation 23 'icmp' 'empty_12' <Predicate = (!icmp_ln23)> <Delay = 0.63> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 0.63> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 24 [1/1] (0.70ns)   --->   "%empty_13 = add i4 %trunc_ln23, i4 6" [loop_perfect.cpp:23]   --->   Operation 24 'add' 'empty_13' <Predicate = (!icmp_ln23)> <Delay = 0.70> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.70> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (0.35ns)   --->   "%empty_14 = select i1 %empty_12, i4 %trunc_ln23, i4 %empty_13" [loop_perfect.cpp:23]   --->   Operation 25 'select' 'empty_14' <Predicate = (!icmp_ln23)> <Delay = 0.35> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.35> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%zext_ln21 = zext i4 %empty_14" [loop_perfect.cpp:21]   --->   Operation 26 'zext' 'zext_ln21' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%tmp_1 = bitselect i1 @_ssdm_op_BitSelect.i1.i11.i32, i11 %phi_mul_load, i32 9" [loop_perfect.cpp:31]   --->   Operation 27 'bitselect' 'tmp_1' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%br_ln28 = br i1 %empty_11, void %if.then9.19, void %if.else.19" [loop_perfect.cpp:28]   --->   Operation 28 'br' 'br_ln28' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%br_ln29 = br i1 %tmp_1, void %arrayidx13.0.0.09129.case.0, void %arrayidx13.0.0.09129.case.1" [loop_perfect.cpp:29]   --->   Operation 29 'br' 'br_ln29' <Predicate = (!icmp_ln23 & !empty_11)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%B_0_addr = getelementptr i6 %B_0, i64 0, i64 %zext_ln21" [loop_perfect.cpp:29]   --->   Operation 30 'getelementptr' 'B_0_addr' <Predicate = (!icmp_ln23 & !empty_11 & !tmp_1)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.66ns)   --->   "%store_ln29 = store i6 %tmp, i4 %B_0_addr" [loop_perfect.cpp:29]   --->   Operation 31 'store' 'store_ln29' <Predicate = (!icmp_ln23 & !empty_11 & !tmp_1)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%br_ln29 = br void %arrayidx13.0.0.09129.exit" [loop_perfect.cpp:29]   --->   Operation 32 'br' 'br_ln29' <Predicate = (!icmp_ln23 & !empty_11 & !tmp_1)> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%B_1_addr = getelementptr i6 %B_1, i64 0, i64 %zext_ln21" [loop_perfect.cpp:29]   --->   Operation 33 'getelementptr' 'B_1_addr' <Predicate = (!icmp_ln23 & !empty_11 & tmp_1)> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.66ns)   --->   "%store_ln29 = store i6 %tmp, i4 %B_1_addr" [loop_perfect.cpp:29]   --->   Operation 34 'store' 'store_ln29' <Predicate = (!icmp_ln23 & !empty_11 & tmp_1)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%br_ln29 = br void %arrayidx13.0.0.09129.exit" [loop_perfect.cpp:29]   --->   Operation 35 'br' 'br_ln29' <Predicate = (!icmp_ln23 & !empty_11 & tmp_1)> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%br_ln29 = br void %for.inc.19" [loop_perfect.cpp:29]   --->   Operation 36 'br' 'br_ln29' <Predicate = (!icmp_ln23 & !empty_11)> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%br_ln31 = br i1 %tmp_1, void %arrayidx13.0.0.09129.case.02, void %arrayidx13.0.0.09129.case.13" [loop_perfect.cpp:31]   --->   Operation 37 'br' 'br_ln31' <Predicate = (!icmp_ln23 & empty_11)> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%B_0_addr_1 = getelementptr i6 %B_0, i64 0, i64 %zext_ln21" [loop_perfect.cpp:31]   --->   Operation 38 'getelementptr' 'B_0_addr_1' <Predicate = (!icmp_ln23 & empty_11 & !tmp_1)> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.66ns)   --->   "%store_ln31 = store i6 0, i4 %B_0_addr_1" [loop_perfect.cpp:31]   --->   Operation 39 'store' 'store_ln31' <Predicate = (!icmp_ln23 & empty_11 & !tmp_1)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%br_ln31 = br void %arrayidx13.0.0.09129.exit1" [loop_perfect.cpp:31]   --->   Operation 40 'br' 'br_ln31' <Predicate = (!icmp_ln23 & empty_11 & !tmp_1)> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%B_1_addr_1 = getelementptr i6 %B_1, i64 0, i64 %zext_ln21" [loop_perfect.cpp:31]   --->   Operation 41 'getelementptr' 'B_1_addr_1' <Predicate = (!icmp_ln23 & empty_11 & tmp_1)> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.66ns)   --->   "%store_ln31 = store i6 0, i4 %B_1_addr_1" [loop_perfect.cpp:31]   --->   Operation 42 'store' 'store_ln31' <Predicate = (!icmp_ln23 & empty_11 & tmp_1)> <Delay = 0.66> <CoreInst = "RAM">   --->   Core 83 'RAM' <Latency = 1> <II = 1> <Delay = 0.66> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 6> <Depth = 10> <RAM>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%br_ln31 = br void %arrayidx13.0.0.09129.exit1" [loop_perfect.cpp:31]   --->   Operation 43 'br' 'br_ln31' <Predicate = (!icmp_ln23 & empty_11 & tmp_1)> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.19"   --->   Operation 44 'br' 'br_ln0' <Predicate = (!icmp_ln23 & empty_11)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.38ns)   --->   "%store_ln23 = store i5 %add_ln23, i5 %i" [loop_perfect.cpp:23]   --->   Operation 45 'store' 'store_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.38>
+ST_1 : Operation 46 [1/1] (0.38ns)   --->   "%store_ln23 = store i11 %next_mul, i11 %phi_mul" [loop_perfect.cpp:23]   --->   Operation 46 'store' 'store_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.38>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%br_ln23 = br void %for.body3" [loop_perfect.cpp:23]   --->   Operation 47 'br' 'br_ln23' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 48 'ret' 'ret_ln0' <Predicate = (icmp_ln23)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 4ns, clock uncertainty: 1.08ns.
+
+ <State 1>: 1.73ns
+The critical path consists of the following:
+	'alloca' operation ('i') [5]  (0 ns)
+	'load' operation ('i') on local variable 'i' [13]  (0 ns)
+	'add' operation ('empty_13', loop_perfect.cpp:23) [26]  (0.708 ns)
+	'select' operation ('empty_14', loop_perfect.cpp:23) [27]  (0.351 ns)
+	'getelementptr' operation ('B_0_addr', loop_perfect.cpp:29) [34]  (0 ns)
+	'store' operation ('store_ln29', loop_perfect.cpp:29) of variable 'tmp' on array 'B_0' [35]  (0.667 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

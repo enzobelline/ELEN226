@@ -1,0 +1,91 @@
+<profile>
+<RunData>
+  <RUN_TYPE>synth</RUN_TYPE>
+  <VIVADO_VERSION>v.2022.1</VIVADO_VERSION>
+  <ROOT_MODULE_CELL>bd_0_i/hls_inst</ROOT_MODULE_CELL>
+</RunData>
+<TimingReport>
+  <TargetClockPeriod>4.000</TargetClockPeriod>
+  <AchievedClockPeriod>1.589</AchievedClockPeriod>
+  <CLOCK_NAME>ap_clk</CLOCK_NAME>
+  <CP_FINAL>1.589</CP_FINAL>
+  <CP_ROUTE>NA</CP_ROUTE>
+  <CP_SYNTH>1.589</CP_SYNTH>
+  <CP_TARGET>4.000</CP_TARGET>
+  <SLACK_FINAL>2.411</SLACK_FINAL>
+  <SLACK_ROUTE></SLACK_ROUTE>
+  <SLACK_SYNTH>2.411</SLACK_SYNTH>
+  <TIMING_MET>TRUE</TIMING_MET>
+  <TNS_FINAL>0.000</TNS_FINAL>
+  <TNS_ROUTE>NA</TNS_ROUTE>
+  <TNS_SYNTH>0.000</TNS_SYNTH>
+  <WNS_FINAL>2.411</WNS_FINAL>
+  <WNS_ROUTE>NA</WNS_ROUTE>
+  <WNS_SYNTH>2.411</WNS_SYNTH>
+</TimingReport>
+<AreaReport>
+  <Resources>
+    <BRAM>0</BRAM>
+    <CLB>0</CLB>
+    <DSP>1</DSP>
+    <FF>26</FF>
+    <LATCH>0</LATCH>
+    <LUT>8</LUT>
+    <SRL>0</SRL>
+    <URAM>0</URAM>
+  </Resources>
+  <AvailableResources>
+    <BRAM>650</BRAM>
+    <CLB>0</CLB>
+    <DSP>600</DSP>
+    <FF>202800</FF>
+    <LUT>101400</LUT>
+    <URAM>0</URAM>
+  </AvailableResources>
+</AreaReport>
+<RtlModules>
+  <RtlModule CELL="inst" DEPTH="0" FILE_NAME="bd_0_hls_inst_0.v" ORIG_REF_NAME="inner_product" TOP_CELL="bd_0_i/hls_inst/inst">
+    <SubModules count="1">mac_muladd_16s_16s_16ns_16_4_1_U1</SubModules>
+    <Resources DSP="1" FF="26" LUT="8" LogicLUT="8"/>
+    <LocalResources FF="26" LUT="7" LogicLUT="7"/>
+  </RtlModule>
+  <RtlModule CELL="inst/mac_muladd_16s_16s_16ns_16_4_1_U1" BINDMODULE="inner_product_mac_muladd_16s_16s_16ns_16_4_1" DEPTH="1" FILE_NAME="inner_product.v" ORIG_REF_NAME="inner_product_mac_muladd_16s_16s_16ns_16_4_1">
+    <Resources DSP="1" LUT="1" LogicLUT="1"/>
+  </RtlModule>
+</RtlModules>
+<TimingPaths>
+  <TPATH DATAPATH_DELAY="1.225" DATAPATH_LOGIC_DELAY="0.356" DATAPATH_NET_DELAY="0.869" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[0]/R" LOGIC_LEVELS="1" MAX_FANOUT="21" SLACK="2.411" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" LINE_NUMBER="103"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mac_muladd_16s_16s_16ns_16_4_1_U1/inner_product_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U/i_fu_50[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="110"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="96"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.225" DATAPATH_LOGIC_DELAY="0.356" DATAPATH_NET_DELAY="0.869" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[10]/R" LOGIC_LEVELS="1" MAX_FANOUT="21" SLACK="2.411" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" LINE_NUMBER="103"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mac_muladd_16s_16s_16ns_16_4_1_U1/inner_product_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U/i_fu_50[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="110"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[10]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="96"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.225" DATAPATH_LOGIC_DELAY="0.356" DATAPATH_NET_DELAY="0.869" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[11]/R" LOGIC_LEVELS="1" MAX_FANOUT="21" SLACK="2.411" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" LINE_NUMBER="103"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mac_muladd_16s_16s_16ns_16_4_1_U1/inner_product_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U/i_fu_50[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="110"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[11]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="96"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.225" DATAPATH_LOGIC_DELAY="0.356" DATAPATH_NET_DELAY="0.869" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[12]/R" LOGIC_LEVELS="1" MAX_FANOUT="21" SLACK="2.411" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" LINE_NUMBER="103"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mac_muladd_16s_16s_16ns_16_4_1_U1/inner_product_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U/i_fu_50[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="110"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[12]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="96"/>
+  </TPATH>
+  <TPATH DATAPATH_DELAY="1.225" DATAPATH_LOGIC_DELAY="0.356" DATAPATH_NET_DELAY="0.869" ENDPOINT_PIN="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[13]/R" LOGIC_LEVELS="1" MAX_FANOUT="21" SLACK="2.411" STARTPOINT_PIN="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]/C">
+    <CELL  NAME="bd_0_i/hls_inst/inst/ap_CS_fsm_reg[0]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDSE" LINE_NUMBER="103"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/mac_muladd_16s_16s_16ns_16_4_1_U1/inner_product_mac_muladd_16s_16s_16ns_16_4_1_DSP48_0_U/i_fu_50[2]_i_1" PRIMITIVE_TYPE="LUT.others.LUT2" LINE_NUMBER="110"/>
+    <CELL  NAME="bd_0_i/hls_inst/inst/acc_V_fu_46_reg[13]" PRIMITIVE_TYPE="FLOP_LATCH.flop.FDRE" LINE_NUMBER="96"/>
+  </TPATH>
+</TimingPaths>
+<VivadoReportFiles>
+  <ReportFile TYPE="design_analysis" PATH="verilog/report/inner_product_design_analysis_synth.rpt"/>
+  <ReportFile TYPE="failfast" PATH="verilog/report/inner_product_failfast_synth.rpt"/>
+  <ReportFile TYPE="timing" PATH="verilog/report/inner_product_timing_synth.rpt"/>
+  <ReportFile TYPE="timing_paths" PATH="verilog/report/inner_product_timing_paths_synth.rpt"/>
+  <ReportFile TYPE="utilization" PATH="verilog/report/inner_product_utilization_synth.rpt"/>
+  <ReportFile TYPE="utilization_hierarchical" PATH="verilog/report/inner_product_utilization_hierarchical_synth.rpt"/>
+</VivadoReportFiles>
+</profile>

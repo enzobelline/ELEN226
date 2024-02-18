@@ -1,0 +1,53 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "loop_perfect",
+          "label": "LOOP_J",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution2\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution2\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_perfect"
+              }]
+          }
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution2\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution2\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_perfect"
+              }]
+          }
+        }
+      ]
+    }]}

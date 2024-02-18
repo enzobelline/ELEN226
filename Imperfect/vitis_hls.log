@@ -1,0 +1,57 @@
+INFO: [HLS 200-10] Running 'C:/Apps/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'lkim' on host 'win11212' (Windows NT_amd64 version 6.2) on Tue Feb 14 07:51:43 -0800 2023
+INFO: [HLS 200-10] In directory 'Z:/ECC/Desktop/Winter2023/ELEN226/Midterm'
+Sourcing Tcl script 'Z:/ECC/Desktop/Winter2023/ELEN226/Midterm/proj_loop_perfect/solution1/cosim.tcl'
+INFO: [HLS 200-1510] Running: source Z:/ECC/Desktop/Winter2023/ELEN226/Midterm/proj_loop_perfect/solution1/cosim.tcl
+INFO: [HLS 200-1510] Running: open_project proj_loop_perfect 
+INFO: [HLS 200-10] Opening project 'Z:/ECC/Desktop/Winter2023/ELEN226/Midterm/proj_loop_perfect'.
+INFO: [HLS 200-1510] Running: set_top loop_perfect 
+INFO: [HLS 200-1510] Running: add_files loop_perfect.cpp 
+INFO: [HLS 200-10] Adding design file 'loop_perfect.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb result.golden.dat -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+WARNING: [HLS 200-40] Cannot find test bench file 'result.golden.dat'
+INFO: [HLS 200-1510] Running: add_files -tb loop_perfect_test.cpp -cflags -Wno-unknown-pragmas -csimflags -Wno-unknown-pragmas 
+INFO: [HLS 200-10] Adding test bench file 'loop_perfect_test.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution 'Z:/ECC/Desktop/Winter2023/ELEN226/Midterm/proj_loop_perfect/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-1611] Setting target device to 'xcvu9p-flga2104-2-i'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.1;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=0
+INFO: [HLS 200-1510] Running: set_part xcvu9p-flga2104-2-i 
+INFO: [HLS 200-1510] Running: create_clock -period 25 -name default 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_latency 0 
+INFO: [HLS 200-1510] Running: source ./proj_loop_perfect/solution1/directives.tcl
+INFO: [HLS 200-1510] Running: set_directive_pipeline loop_perfect/LOOP_J 
+INFO: [HLS 200-1510] Running: set_directive_top -name loop_perfect loop_perfect 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+WARNING: [HLS 200-626] This design is unable to schedule all read ports in the first II cycle. The RTL testbench may treat the design as non-pipelined
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "C:/Apps/Xilinx/Vitis_HLS/2022.1/tps/win64/msys64/mingw64/bin/g++"
+   Compiling loop_perfect_test.cpp_pre.cpp.tb.cpp
+   Compiling loop_perfect.cpp_pre.cpp.tb.cpp
+   Compiling apatb_loop_perfect.cpp
+   Compiling apatb_loop_perfect_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+diff: result.golden.dat: No such file or directory
+Test failed  !!!
+ERROR: [COSIM 212-359] Aborting co-simulation: C TB simulation failed, nonzero return value '1'.
+ERROR: [COSIM 212-320] C TB testing failed, stop generating test vectors. Please check C TB or re-run cosim.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 17.575 seconds; current allocated memory: 0.000 MB.
+command 'ap_source' returned error code
+    while executing
+"source Z:/ECC/Desktop/Winter2023/ELEN226/Midterm/proj_loop_perfect/solution1/cosim.tcl"
+    invoked from within
+"hls::main Z:/ECC/Desktop/Winter2023/ELEN226/Midterm/proj_loop_perfect/solution1/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$newargs"
+    (procedure "hls_proc" line 16)
+    invoked from within
+"hls_proc [info nameofexecutable] $argv"
+INFO: [HLS 200-112] Total CPU user time: 3 seconds. Total CPU system time: 2 seconds. Total elapsed time: 21.559 seconds; peak allocated memory: 1.214 GB.

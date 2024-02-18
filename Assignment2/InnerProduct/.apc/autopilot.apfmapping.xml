@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="inner_product.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2\inner_product.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="tb_inner_product.cpp" path="Z:\ECC\Desktop\Winter2023\ELEN226\Assignment2\tb_inner_product.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

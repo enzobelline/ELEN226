@@ -1,0 +1,16 @@
+'\\samba2.engr.scu.edu\lkim\ECC\Desktop\Winter2023\ELEN226\Imperfect\ImperfectLoop'
+CMD.EXE was started with the above path as the current directory.
+UNC paths are not supported.  Defaulting to Windows directory.
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source C:/Apps/Xilinx/Vitis_HLS/2022.1/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running 'C:/Apps/Xilinx/Vitis_HLS/2022.1/bin/unwrapped/win64.o/vitis_hls.exe'
+INFO: [HLS 200-10] For user 'lkim' on host 'win11212' (Windows NT_amd64 version 6.2) on Tue Feb 14 08:07:35 -0800 2023
+INFO: [HLS 200-10] In directory 'C:/Windows'
+INFO: [HLS 200-10] Bringing up Vitis HLS GUI ... 
+INFO: [HLS 200-112] Total CPU user time: 0 seconds. Total CPU system time: 0 seconds. Total elapsed time: 1.077 seconds; peak allocated memory: 1.234 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Tue Feb 14 08:07:35 2023...

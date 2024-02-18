@@ -1,0 +1,23 @@
+
+
+Implementation tool: Xilinx Vivado v.2022.1
+Project:             InnerProduct
+Solution:            solution2
+Device target:       xc7k160t-fbg676-2
+Report date:         Fri Feb 24 12:49:49 -0800 2023
+
+#=== Post-Synthesis Resource usage ===
+SLICE:            0
+LUT:             29
+FF:              27
+DSP:              1
+BRAM:             0
+URAM:             0
+LATCH:            0
+SRL:              2
+CLB:              0
+
+#=== Final timing ===
+CP required:                     4.000
+CP achieved post-synthesis:      2.592
+Timing met

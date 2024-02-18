@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BindInfo>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op icmp" ID="" IMPL="auto" LATENCY="0" OPTYPE="icmp" PRAGMA="" RTLNAME="icmp_ln10_fu_110_p2" SOURCE="inner_product.cpp:10" VARIABLE="icmp_ln10" MODULE="inner_product" LOOP="inner_product_loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="fabric" LATENCY="0" OPTYPE="add" PRAGMA="" RTLNAME="add_ln10_fu_116_p2" SOURCE="inner_product.cpp:10" VARIABLE="add_ln10" MODULE="inner_product" LOOP="inner_product_loop" BUNDLEDNAME="" DSP="0" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op mul" ID="" IMPL="dsp48" LATENCY="3" OPTYPE="mul" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U1" SOURCE="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:859" VARIABLE="mul_ln859" MODULE="inner_product" LOOP="inner_product_loop" BUNDLEDNAME="" DSP="1" BRAM="0" URAM="0"/>
+	<BindNode BINDTYPE="op" DISPLAY="bind_op add" ID="" IMPL="dsp48" LATENCY="3" OPTYPE="add" PRAGMA="" RTLNAME="mac_muladd_16s_16s_16ns_16_4_1_U1" SOURCE="C:/Apps/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h:859" VARIABLE="acc_V_1" MODULE="inner_product" LOOP="inner_product_loop" BUNDLEDNAME="" DSP="1" BRAM="0" URAM="0"/>
+</BindInfo>

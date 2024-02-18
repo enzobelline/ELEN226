@@ -1,0 +1,9 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../tb_inner_product.cpp in debug mode
+   Compiling ../../../../inner_product.cpp in debug mode
+   Generating csim.exe
+20858	20858
+simulation passed
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

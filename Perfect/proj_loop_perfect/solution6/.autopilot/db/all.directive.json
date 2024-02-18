@@ -1,0 +1,150 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "loop_perfect",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution6\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_perfect"
+              }]
+          }
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution6\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "A"
+              },
+              {
+                "name": "block",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "2"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution6\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "ARRAY_PARTITION",
+            "option": [
+              {
+                "name": "variable",
+                "value": "B"
+              },
+              {
+                "name": "block",
+                "value": ""
+              },
+              {
+                "name": "factor",
+                "value": "2"
+              },
+              {
+                "name": "dim",
+                "value": "1"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "LOOP_J",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution6\/directives.tcl",
+          "sourceLine": "9",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [
+              {
+                "name": "II",
+                "value": "1"
+              },
+              {
+                "name": "rewind",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "LOOP_I",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution6\/directives.tcl",
+          "sourceLine": "10",
+          "pragma": {
+            "name": "PIPELINE",
+            "option": [
+              {
+                "name": "II",
+                "value": "1"
+              },
+              {
+                "name": "rewind",
+                "value": ""
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "LOOP_J",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution6\/directives.tcl",
+          "sourceLine": "11",
+          "pragma": {
+            "name": "UNROLL",
+            "option": [{
+                "name": "factor",
+                "value": "2"
+              }]
+          }
+        },
+        {
+          "functionName": "loop_perfect",
+          "label": "",
+          "functionLabel": "",
+          "id": "7",
+          "sourceFile": "Z:\/ECC\/Desktop\/Winter2023\/ELEN226\/Perfect\/proj_loop_perfect\/solution6\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "loop_perfect"
+              }]
+          }
+        }
+      ]
+    }]}
